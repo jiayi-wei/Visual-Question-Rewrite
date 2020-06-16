@@ -89,13 +89,14 @@ class QRewriteModel(tf.keras.Model):
     return x, state, text_weights, image_weights
 
 
-def GenEncoder(tf.keras.Model):
+class GenEncoder(tf.keras.Model):
   def __init__(self,
   	           vocab_inp_size,
   	           embedding_dim,
   	           enc_units):
+    super(GenEncoder, self).__init__()
     self.enc_embedding = tf.keras.layers.Embedding(vocab_inp_size, embedding_dim)
-    self.gru = tf.keras.layers.GRU(self.enc_units,
+    self.gru = tf.keras.layers.GRU(enc_units,
                                    return_state=True,
                                    return_sequences=True,
     	                             recurrent_initializer='glorot_uniform')

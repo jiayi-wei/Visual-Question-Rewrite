@@ -24,7 +24,7 @@ def preprocess_sentence(w):
 ##  bert tokenizer  ##
 ######################
 
-FullTokenizer = bert.bert_tokenization.FullTokenize
+FullTokenizer = bert.bert_tokenization.FullTokenizer
 
 
 bert_layer = hub.KerasLayer("https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/2",
@@ -94,18 +94,21 @@ def general_preprocess(qs, gen_tokenizer=None):
   # without tokenizer, build it
   # return tokens and tokenizer
 
-  if not tokenizer:
+  qs = [preprocess_sentence(q) for q in qs]
+  qs = ['[CLS] ' + q + ' [SEP]' for q in qs]
+
+  print(qs[0])
+
+  if not gen_tokenizer:
   	#build tokenizer
-    qs = [preprocess_sentence(q) for q in qs]
-    # qs = ['[CLS] ' + q + ' [SEP]' for q in qs]
     gen_tokenizer = tf.keras.preprocessing.text.Tokenizer(filters='',
                                                            lower=False)
-  	gen_tokenizer.fit_on_texts(qs)
-  	gen_tokenizer.word_index['<pad>'] = 0
-  	gen_tokenizer.index_word[0] = '<pad>'
-
+    gen_tokenizer.fit_on_texts(qs)
+    gen_tokenizer.word_index['<pad>'] = 0
+    gen_tokenizer.index_word[0] = '<pad>'
+  
   # max_len = max(all qs)
   tokens = gen_tokenizer.texts_to_sequences(qs)
   tokens = tf.keras.preprocessing.sequence.pad_sequences(tokens,
                                                          padding='post')
-  return tokens, output_tokenizer
+  return tokens, gen_tokenizer
