@@ -14,13 +14,14 @@ root = "./"
 
 exp_name = "res50_gen_token"
 
-cate = "auto_annot"
+cate = "human_annot"
 img_model_name = 'res50'
 fc_top = False
 
 #################
 ###  data read ##
 
+print("data preprocessing")
 # q_data longer, new_q_data shorter
 q_data, new_q_data, img_data = data_preprocess.read_data(root, cate)
 
@@ -44,6 +45,7 @@ train_img, val_img = data_preprocess.train_val_split(img_data)
 ###################
 ## model config ###
 
+print("dataset build")
 buffer_size = len(train_input_ids)
 batch_size = 64
 steps_per_epoch = len(train_input_ids) // batch_size
@@ -81,6 +83,7 @@ dataset = dataset.shuffle(buffer_size).batch(batch_size)
 #####################
 #### model & optim ##
 
+print("model build")
 decoder = model.QRewriteModel(vocab_tar_size,
                               embedding_dim,
                               units,
@@ -143,6 +146,8 @@ def train_step(ids, targ, img):
 
 ################
 #### training ##
+
+print("Begin training")
 EPOCHS = 10
 
 for epoch in range(EPOCHS):
