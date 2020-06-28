@@ -12,12 +12,18 @@ class TextAttention(tf.keras.layers.Layer):
     self.V = tf.keras.layers.Dense(1)
 
   def call(self, query, values):
+    # query         batch*units
+    # values        batch*len*units
     query_with_time_axis = tf.expand_dims(query, 1)
+    # query_with_time_axis      batch*1*units
     score = self.V(tf.nn.tanh(self.W1(query_with_time_axis) + self.W2(values)))
+    # score         batch*len*1
     attention_weights = tf.nn.softmax(score, axis=1)
+    # attention_weights     batch*len  (probability)
 
     context_vector = attention_weights * values
     context_vector = tf.reduce_sum(context_vector, axis=1)
+    # context_vector        batch*units
 
     return context_vector, attention_weights
 
@@ -74,9 +80,15 @@ class QRewriteModel(tf.keras.Model):
         self.img_attention = ImageAttention(self.dec_units)
         self.img_fc = tf.keras.layers.Dense(self.dec_units)
 
-  def call(self, x, hidden, enc_output, img_feature):
-  	# get text feature based on encode output and last hidden
+  def call(self, x, hidden, enc_output, img_feature=None):
+    # get text feature based on encode output and last hidden
+    # print(x.shape, hidden.shape, enc_output.shape)
+    # x             batch*1
+    # hidden        batch*units
+    # enc_output    batch*len*units
     text_vector, text_weights = self.text_attention(hidden, enc_output)
+    # text_vector   batch*units
+
     # get image feature based on encode output and last hidden
     if self.with_visual:
         img_feature = self.img_fc(img_feature)
@@ -84,8 +96,11 @@ class QRewriteModel(tf.keras.Model):
 
     # x is the last predicted token.
     x = self.dec_embedding(x)
+    # x             batch*embed
 
     # get the next state and seq
+    # print(text_vector.shape)
+    # print(x.shape)
     if self.with_visual:
         x = tf.concat([tf.expand_dims(text_vector, 1),
                        tf.expand_dims(image_vector, 1),
@@ -109,9 +124,11 @@ class GenEncoder(tf.keras.Model):
   	           # vocab_inp_size,
   	           # embedding_dim,
                embedding,
-  	           enc_units):
+  	       enc_units):
     super(GenEncoder, self).__init__()
     #self.enc_embedding = tf.keras.layers.Embedding(vocab_inp_size, embedding_dim)
+    self.enc_units = enc_units
+
     self.enc_embedding = embedding
     self.gru = tf.keras.layers.GRU(enc_units,
                                    return_state=True,
@@ -119,9 +136,18 @@ class GenEncoder(tf.keras.Model):
     	                           recurrent_initializer='glorot_uniform')
 
   def call(self, x):
-  	x = self.enc_embedding(x)
-  	output, state = self.gru(x)
-  	return output, state
+      # x   batch*len
+      x = self.enc_embedding(x)
+      # x   batch*len*256
+      # print(x.shape)
+      # print(self.initialize_hidden_state(x.shape[0]).shape)
+      output, state = self.gru(x, self.initialize_hidden_state(x.shape[0]))
+      # output   batch*len*unit
+      # state    batch*unit
+      return output, state
+
+  def initialize_hidden_state(self, batch_sz):
+    return tf.zeros((batch_sz, self.enc_units))
 
 
 

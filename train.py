@@ -47,7 +47,7 @@ train_img, val_img = data_preprocess.train_val_split(img_data)
 
 print("dataset build")
 buffer_size = len(train_input_ids)
-batch_size = 64
+batch_size = 16
 steps_per_epoch = len(train_input_ids) // batch_size
 vocab_tar_size = len(gen_tokenizer.word_index) + 1
 embedding_dim = 256
@@ -85,13 +85,13 @@ dataset = dataset.shuffle(buffer_size).batch(batch_size)
 
 print("model build")
 embedding_layer = tf.keras.layers.Embedding(vocab_tar_size, embedding_dim)
-decoder = model.QRewriteModel(embedding_layer,
+decoder = model.QRewriteModel(vocab_tar_size,
+                              embedding_layer,
                               units,
                               batch_size,
                               with_visual=with_visual)
 # encoder = model.bert_encoder(input_max_length)
-encoder = model.GenEncoder(vocab_tar_size,
-                           embedding_dim,
+encoder = model.GenEncoder(embedding_layer,
                            units)
 
 optimizer = tf.keras.optimizers.Adam()
@@ -118,11 +118,15 @@ def train_step(ids, targ, img):
   loss = 0
 
   with tf.GradientTape() as tape:
+    # ids    batch*len
+    # enc_output   batch*len*units
+    # enc_hidden   batch*units
     enc_output, enc_hidden = encoder(ids)
 
     dec_hidden = enc_hidden
 
-    dec_input = tf.expand_dims([gen_tokenizer.word_index['[CLS]']] * batch_size, 1)
+    # dec_input   batch*1
+    dec_input = tf.expand_dims([gen_tokenizer.word_index['[CLS]']] * ids.shape[0], 1)
 
     # Teacher forcing - feeding the target as the next input
     for t in range(1, targ.shape[1]):
@@ -132,6 +136,9 @@ def train_step(ids, targ, img):
       #                                        enc_output,
       #                                        img)
 
+      # dec_input       batch*1
+      # dec_hidden      batch*units
+      # enc_output      batch*len*units
       predictions, dec_hidden, _ = decoder(dec_input,
                                            dec_hidden,
                                            enc_output)
@@ -154,11 +161,12 @@ def train_step(ids, targ, img):
 #### training ##
 
 print("Begin training")
-EPOCHS = 10
+EPOCHS = 100
 
 for epoch in range(EPOCHS):
   start = time.time()
 
+  # enc_hidden = encoder.initialize_hidden_state()
   total_loss = 0
 
   for batch, (ids, targ, img) in enumerate(dataset):

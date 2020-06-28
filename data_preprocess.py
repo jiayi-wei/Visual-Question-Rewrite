@@ -90,7 +90,7 @@ def extract_img_feat(root, cate, img_data, name='res50', fc=False):
   image_dataset = tf.data.Dataset.from_tensor_slices(unique_img)
   image_dataset = image_dataset.map(
       load_image,
-      num_parallel_calls=tf.data.experimental.AUTOTUNE).batch(64)
+      num_parallel_calls=tf.data.experimental.AUTOTUNE).batch(16)
 
   print("Model and Dataset Done.")
 
@@ -118,7 +118,7 @@ def extract_img_feat(root, cate, img_data, name='res50', fc=False):
   return img_data
 
 
-def train_val_split(data, rate=0.8):
+def train_val_split(data, rate=0.9):
   len_ = len(data)
   return data[:int(len_ * rate)], data[int(len_ * rate):]
 
