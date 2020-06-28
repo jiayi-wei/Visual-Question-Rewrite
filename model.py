@@ -28,7 +28,7 @@ class ImageAttention(tf.keras.layers.Layer):
     self.W_I = tf.keras.layers.Dense(units)
     self.W_Q = tf.keras.layers.Dense(units)
     self.W_P = tf.keras.layers.Dense(1)
-    
+
   def call(self, v_I, v_Q):
     v_I_att = self.W_I(v_I)
     v_Q_att = self.W_Q(v_Q)
@@ -42,17 +42,20 @@ class ImageAttention(tf.keras.layers.Layer):
     return v_att, attention_weights
 
 
-
 class QRewriteModel(tf.keras.Model):
   def __init__(self,
                vocab_tar_size,
-               embedding_dim,
+               # embedding_dim,
+               embedding,
                dec_units,
-               batch_size):
+               batch_size,
+               with_visual=False):
     super(QRewriteModel, self).__init__()
     # self.batch_size = batch_size
     self.dec_units = dec_units
-    self.dec_embedding = tf.keras.layers.Embedding(vocab_tar_size, embedding_dim)
+    self.with_visual = with_visual
+    # self.dec_embedding = tf.keras.layers.Embedding(vocab_tar_size, embedding_dim)
+    self.dec_embedding = embedding
     # return both sequence and state in GRU unit
     self.gru = tf.keras.layers.GRU(self.dec_units,
                                    return_sequences=True,
@@ -67,39 +70,53 @@ class QRewriteModel(tf.keras.Model):
     self.text_attention = TextAttention(self.dec_units)
     self.img_attention = ImageAttention(self.dec_units)
     self.img_fc = tf.keras.layers.Dense(self.dec_units)
+    if self.with_visual:
+        self.img_attention = ImageAttention(self.dec_units)
+        self.img_fc = tf.keras.layers.Dense(self.dec_units)
 
   def call(self, x, hidden, enc_output, img_feature):
   	# get text feature based on encode output and last hidden
     text_vector, text_weights = self.text_attention(hidden, enc_output)
     # get image feature based on encode output and last hidden
-    img_feature = self.img_fc(img_feature)
-    image_vector, image_weights = self.img_attention(img_feature, hidden)
+    if self.with_visual:
+        img_feature = self.img_fc(img_feature)
+        image_vector, image_weights = self.img_attention(img_feature, hidden)
 
     # x is the last predicted token.
     x = self.dec_embedding(x)
 
     # get the next state and seq
-    x = tf.concat([tf.expand_dims(text_vector, 1),
-                   tf.expand_dims(image_vector, 1),
-                   x], axis=-1)
-    output, state =  self.gru(x)
+    if self.with_visual:
+        x = tf.concat([tf.expand_dims(text_vector, 1),
+                       tf.expand_dims(image_vector, 1),
+                       x], axis=-1)
+    else:
+        x = tf.concat([tf.expand_dims(text_vector, 1),
+                       x], axis=-1)
+
+    output, state = self.gru(x)
     output = tf.reshape(output, (-1, output.shape[2]))
 
     x = self.fc(output)
-    return x, state, text_weights, image_weights
+
+    if self.with_visual:
+        return x, state, text_weights, image_weights
+    return x, state, text_weights
 
 
 class GenEncoder(tf.keras.Model):
   def __init__(self,
-  	           vocab_inp_size,
-  	           embedding_dim,
+  	           # vocab_inp_size,
+  	           # embedding_dim,
+               embedding,
   	           enc_units):
     super(GenEncoder, self).__init__()
-    self.enc_embedding = tf.keras.layers.Embedding(vocab_inp_size, embedding_dim)
+    #self.enc_embedding = tf.keras.layers.Embedding(vocab_inp_size, embedding_dim)
+    self.enc_embedding = embedding
     self.gru = tf.keras.layers.GRU(enc_units,
                                    return_state=True,
                                    return_sequences=True,
-    	                             recurrent_initializer='glorot_uniform')
+    	                           recurrent_initializer='glorot_uniform')
 
   def call(self, x):
   	x = self.enc_embedding(x)

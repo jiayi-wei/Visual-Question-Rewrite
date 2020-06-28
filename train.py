@@ -25,7 +25,7 @@ print("data preprocessing")
 # q_data longer, new_q_data shorter
 q_data, new_q_data, img_data = data_preprocess.read_data(root, cate)
 
-img_data = data_preprocess.extract_img_feat(root, 
+img_data = data_preprocess.extract_img_feat(root,
                                             cate,
                                             img_data,
                                             name=img_model_name,
@@ -52,7 +52,7 @@ steps_per_epoch = len(train_input_ids) // batch_size
 vocab_tar_size = len(gen_tokenizer.word_index) + 1
 embedding_dim = 256
 units = 768
-
+with_visual = False
 ####################
 #### dataset #######
 # bert input encoding
@@ -84,10 +84,11 @@ dataset = dataset.shuffle(buffer_size).batch(batch_size)
 #### model & optim ##
 
 print("model build")
-decoder = model.QRewriteModel(vocab_tar_size,
-                              embedding_dim,
+embedding_layer = tf.keras.layers.Embedding(vocab_tar_size, embedding_dim)
+decoder = model.QRewriteModel(embedding_layer,
                               units,
-                              batch_size)
+                              batch_size,
+                              with_visual=with_visual)
 # encoder = model.bert_encoder(input_max_length)
 encoder = model.GenEncoder(vocab_tar_size,
                            embedding_dim,
@@ -118,18 +119,23 @@ def train_step(ids, targ, img):
 
   with tf.GradientTape() as tape:
     enc_output, enc_hidden = encoder(ids)
-    
+
     dec_hidden = enc_hidden
-    
+
     dec_input = tf.expand_dims([gen_tokenizer.word_index['[CLS]']] * batch_size, 1)
 
     # Teacher forcing - feeding the target as the next input
     for t in range(1, targ.shape[1]):
       # passing enc_output and image feature to the decoder
-      predictions, dec_hidden, _, _ = decoder(dec_input,
-                                              dec_hidden,
-                                              enc_output,
-                                              img)
+      # predictions, dec_hidden, _, _ = decoder(dec_input,
+      #                                        dec_hidden,
+      #                                        enc_output,
+      #                                        img)
+
+      predictions, dec_hidden, _ = decoder(dec_input,
+                                           dec_hidden,
+                                           enc_output)
+
       loss += loss_function(targ[:, t], predictions)
       # using teacher forcing
       dec_input = tf.expand_dims(targ[:, t], 1)
@@ -137,9 +143,9 @@ def train_step(ids, targ, img):
   batch_loss = (loss / int(targ.shape[1]))
 
   variables = encoder.trainable_variables + decoder.trainable_variables
-  
+
   gradients = tape.gradient(loss, variables)
-  
+
   optimizer.apply_gradients(zip(gradients, variables))
   return batch_loss
 
@@ -163,9 +169,9 @@ for epoch in range(EPOCHS):
     print('Epoch {} Batch {} Loss {:.4f}'.format(epoch + 1,
                                                  batch,
                                                  batch_loss.numpy()))
-    
+
   if (epoch + 1) % 2 == 0:
     checkpoint.save(file_prefix=checkpoint_prefix)
-  
+
   print('Epoch {} Loss {:.4f}'.format(epoch + 1, total_loss / steps_per_epoch))
   print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
