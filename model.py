@@ -116,7 +116,7 @@ class QRewriteModel(tf.keras.Model):
 
     if self.with_visual:
         return x, state, text_weights, image_weights
-    return x, state, text_weights
+    return x, state, text_weights, None
 
 
 class GenEncoder(tf.keras.Model):
