@@ -15,6 +15,16 @@ root = "./"
 exp_name = "res50_gen_token"
 
 cate = "human_annot"
+with_visual = False
+
+if with_visual:
+    exp_name += "_no_visual_"
+else:
+    exp_name += "_visual_"
+
+exp_name += cate
+
+
 img_model_name = 'res50'
 fc_top = False
 
@@ -52,7 +62,7 @@ steps_per_epoch = len(train_input_ids) // batch_size
 vocab_tar_size = len(gen_tokenizer.word_index) + 1
 embedding_dim = 256
 units = 768
-with_visual = False
+# with_visual = False
 max_length_targ, max_length_inp = target_ids.shape[1], input_ids.shape[1]
 ####################
 #### dataset #######
@@ -83,7 +93,7 @@ dataset = dataset.shuffle(buffer_size).batch(batch_size)
 
 # val dataset
 val_dataset = tf.data.Dataset.from_tensor_slices((val_input_ids,
-                                                  val_taget_ids,
+                                                  val_target_ids,
                                                   val_img))
 val_dataset = val_dataset.map(lambda ids, targ, img:
                                   tf.numpy_function(data_preprocess.load_func_gen,
@@ -120,7 +130,7 @@ def loss_function(real, pred):
   return tf.reduce_mean(loss_)
 
 
-checkpoint_dir = './training_checkpoints_{}_epoch'
+checkpoint_dir = './training_checkpoints/' + exp_name 
 checkpoint_prefix = os.path.join(checkpoint_dir, 'ckpt')
 checkpoint = tf.train.Checkpoint(optimizer=optimizer,
                                  encoder=encoder,
@@ -192,22 +202,23 @@ def eval(val_dataset, data_size, return_result=False):
     dec_input = tf.expand_dims([gen_tokenizer.word_index['[CLS]']] * ids.shape[0], 1)
     
     for t in range(1, max_length_targ):
-      predictions, dec_hidden, text_weight, img_weight = 
-              decoder(dec_input, dec_hidden, enc_output, img)
+      predictions, dec_hidden, text_weight, img_weight = decoder(dec_input, dec_hidden, enc_output, img)
       
       total_loss += loss_function(targ[:, t], predictions)
       
-      pre_ids = gen_tokenizer.index_word[predictions[0].numpy()]
+      pre_ = tf.argmax(predictions[0]).numpy()
+      pre_ids = gen_tokenizer.index_word[pre_]
       
       if return_result == True:
         out_sen += pre_ids + ' '
         text_weights.append(text_weight.numpy())
-        img_weights.append(img_weight.numpy())
+        if img_weights:
+            img_weights.append(img_weight.numpy())
 
       if pre_ids == "[SEP]":
         break
 
-      dec_input = tf.expand_dims([predictions], 1)
+      dec_input = tf.expand_dims([pre_], 1)
 
     total_loss = total_loss / data_size
 
@@ -238,7 +249,7 @@ for epoch in range(EPOCHS):
     batch_loss = train_step(ids, targ, img)
     total_loss += batch_loss
 
-    if batch % 3 == 0:
+    if batch % 5 == 0:
       print('Epoch {} Batch {} Loss {:.4f}'.format(epoch + 1,
                                                    batch,
                                                    batch_loss.numpy()))
@@ -246,16 +257,18 @@ for epoch in range(EPOCHS):
 
   if eval_loss > eval_loss_after_epoch:
     eval_loss = eval_loss_after_epoch
+    print("Model Saved with eval loss {}".format(eval_loss))
     checkpoint.save(file_prefix=checkpoint_prefix.format(epoch+1))
 
   print('Epoch {} Loss {:.4f}'.format(epoch + 1, total_loss / steps_per_epoch))
   print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
 
-train_loss, train_input, train_output, train_text_w, train_img_w =
-    eval(dataset, len(train_target_ids), return_result=True)
+# evaluate after training
+checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 
-val_loss, val_input, val_output, val_text_w, val_img_w =
-    eval(val_dataset, len(val_target_ids), return_result=True)
+train_loss, train_input, train_output, train_text_w, train_img_w = eval(dataset, len(train_target_ids), return_result=True)
+
+val_loss, val_input, val_output, val_text_w, val_img_w = eval(val_dataset, len(val_target_ids), return_result=True)
 
 print("Train")
 for i in range(len(train_input)):
