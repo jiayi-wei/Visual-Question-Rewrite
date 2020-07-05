@@ -264,20 +264,31 @@ for epoch in range(EPOCHS):
   print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
 
 # evaluate after training
+train_loss, train_input, train_output, train_text_w, train_img_w = eval(dataset, len(train_target_ids), return_result=True)
+
+val_loss, val_input, val_output, val_text_w, val_img_w = eval(val_dataset, len(val_target_ids), return_result=True)
+
+f = open(os.join(checkpoint_dir, "results.txt"), 'w')
+f.write("Train")
+for i in range(len(train_input)):
+  f.write(train_input[i] + '\t' + train_output[i])
+f.write("Eval")
+for i in range(len(val_input)):
+  f.write(val_input[i] + '\t' + val_output[i])
+f.close()
+
+# restore from best model on val
 checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 
 train_loss, train_input, train_output, train_text_w, train_img_w = eval(dataset, len(train_target_ids), return_result=True)
 
 val_loss, val_input, val_output, val_text_w, val_img_w = eval(val_dataset, len(val_target_ids), return_result=True)
 
-print("Train")
+f = open(os.join(checkpoint_dir, "results_2.txt"), 'w')
+f.write("Train")
 for i in range(len(train_input)):
-  print(train_input[i])
-  print(train_output[i])
-  print()
-
-print("Eval")
+  f.write(train_input[i] + '\t' + train_output[i])
+f.write("Eval")
 for i in range(len(val_input)):
-  print(val_input[i])
-  print(val_output[i])
-  print()
+  f.write(val_input[i] + '\t' + val_output[i])
+f.close()
