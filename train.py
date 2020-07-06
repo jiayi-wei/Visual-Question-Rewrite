@@ -14,8 +14,10 @@ root = "./"
 
 exp_name = "res50_gen_token"
 
+# cate = "auto_annot"
 cate = "human_annot"
 with_visual = False
+# with_visual = True
 
 if with_visual:
     exp_name += "_no_visual_"
@@ -181,18 +183,22 @@ def train_step(ids, targ, img):
   return batch_loss
 
 
-def eval(val_dataset, data_size, return_result=False):
+def eval(input_dataset, data_size, return_result=False):
   total_loss = 0
 
   if return_result == True:
     input_sentences = []
+    target_sentences = []
     output_sentences = []
     all_text_weights = []
     all_img_weights = []
 
-  for ids, targ, img in val_dataset:
+  for ids, targ, img in input_dataset:
+    batch_loss = 0.0
     if return_result:
-      inp_sen = gen_tokenizer.sequences_to_texts(ids.numpy())
+      # inp_sen = ""
+      inp_sen = gen_tokenizer.sequences_to_texts(ids.numpy())[0].replace(' <pad>', '')
+      tar_sen = gen_tokenizer.sequences_to_texts(targ.numpy())[0].replace(' <pad>', '')
       out_sen = ""
       text_weights = []
       img_weights = []
@@ -204,7 +210,7 @@ def eval(val_dataset, data_size, return_result=False):
     for t in range(1, max_length_targ):
       predictions, dec_hidden, text_weight, img_weight = decoder(dec_input, dec_hidden, enc_output, img)
       
-      total_loss += loss_function(targ[:, t], predictions)
+      batch_loss += loss_function(targ[:, t], predictions)
       
       pre_ = tf.argmax(predictions[0]).numpy()
       pre_ids = gen_tokenizer.index_word[pre_]
@@ -220,22 +226,30 @@ def eval(val_dataset, data_size, return_result=False):
 
       dec_input = tf.expand_dims([pre_], 1)
 
-    total_loss = total_loss / data_size
+    # total_loss = total_loss / data_size
+    
+    batch_loss = batch_loss / int(targ.shape[1])
+    total_loss += batch_loss
 
     if return_result == True:
       input_sentences.append(inp_sen)
+      target_sentences.append(tar_sen)
       output_sentences.append(out_sen)
       all_text_weights.append(text_weights)
       all_img_weights.append(img_weights)
-      return total_loss, input_sentences, output_sentences, all_text_weights, all_img_weights
+  
+  total_loss = total_loss / data_size
 
-    return total_loss
+  if return_result:
+    return total_loss, input_sentences, target_sentences, output_sentences, all_text_weights, all_img_weights
+
+  return total_loss
 
 ################
 #### training ##
 
 print("Begin training")
-EPOCHS = 100
+EPOCHS = 50
 eval_loss = 100.0
 
 for epoch in range(EPOCHS):
@@ -263,32 +277,53 @@ for epoch in range(EPOCHS):
   print('Epoch {} Loss {:.4f}'.format(epoch + 1, total_loss / steps_per_epoch))
   print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
 
+
 # evaluate after training
-train_loss, train_input, train_output, train_text_w, train_img_w = eval(dataset, len(train_target_ids), return_result=True)
+print("begin eval")
+train_dataset = tf.data.Dataset.from_tensor_slices((train_input_ids,
+                                                    train_target_ids,
+                                                    train_img))
+train_dataset = train_dataset.map(lambda ids, targ, img:
+                          tf.numpy_function(data_preprocess.load_func_gen,
+                                            [ids, targ, img],
+                                            [tf.int32, tf.int32, tf.float32]),
+                      num_parallel_calls=tf.data.experimental.AUTOTUNE)
 
-val_loss, val_input, val_output, val_text_w, val_img_w = eval(val_dataset, len(val_target_ids), return_result=True)
+train_dataset = train_dataset.batch(1)
 
-f = open(os.join(checkpoint_dir, "results.txt"), 'w')
-f.write("Train")
+train_loss, train_input, train_target, train_output, train_text_w, train_img_w = eval(train_dataset, len(train_target_ids), return_result=True)
+
+val_loss, val_input, val_target, val_output, val_text_w, val_img_w = eval(val_dataset, len(val_target_ids), return_result=True)
+
+f = open(os.path.join(checkpoint_dir, "results_best_on_train.txt"), 'w')
+f.write("Train\n\n")
 for i in range(len(train_input)):
-  f.write(train_input[i] + '\t' + train_output[i])
-f.write("Eval")
+  f.write(train_input[i] + '\n')
+  f.write(train_target[i] + '\n')
+  f.write(train_output[i] + '\n\n')
+f.write("Eval\n\n")
 for i in range(len(val_input)):
-  f.write(val_input[i] + '\t' + val_output[i])
+  f.write(val_input[i] + '\n')
+  f.write(val_target[i] + '\n')
+  f.write(val_output[i] + '\n\n')
 f.close()
 
 # restore from best model on val
 checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 
-train_loss, train_input, train_output, train_text_w, train_img_w = eval(dataset, len(train_target_ids), return_result=True)
+train_loss, train_input, train_target, train_output, train_text_w, train_img_w = eval(train_dataset, len(train_target_ids), return_result=True)
 
-val_loss, val_input, val_output, val_text_w, val_img_w = eval(val_dataset, len(val_target_ids), return_result=True)
+val_loss, val_input, val_target, val_output, val_text_w, val_img_w = eval(val_dataset, len(val_target_ids), return_result=True)
 
-f = open(os.join(checkpoint_dir, "results_2.txt"), 'w')
-f.write("Train")
+f = open(os.path.join(checkpoint_dir, "results_best_on_eval.txt"), 'w')
+f.write("Train\n\n")
 for i in range(len(train_input)):
-  f.write(train_input[i] + '\t' + train_output[i])
-f.write("Eval")
+  f.write(train_input[i] + '\n')
+  f.write(train_target[i] + '\n')
+  f.write(train_output[i] + '\n\n')
+f.write("Eval\n\n")
 for i in range(len(val_input)):
-  f.write(val_input[i] + '\t' + val_output[i])
+  f.write(val_input[i] + '\n')
+  f.write(val_target[i] + '\n')
+  f.write(val_output[i] + '\n\n')
 f.close()
