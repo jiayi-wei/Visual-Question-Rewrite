@@ -19,6 +19,9 @@ cate = "human_annot"
 with_visual = False
 # with_visual = True
 
+# extract_feature = False
+extract_feature = True
+
 if with_visual:
     exp_name += "_no_visual_"
 else:
@@ -41,10 +44,15 @@ img_data = data_preprocess.extract_img_feat(root,
                                             cate,
                                             img_data,
                                             name=img_model_name,
-                                            fc=fc_top)
+                                            fc=fc_top,
+                                            extract_feature=extract_feature)
 
 target_ids, gen_tokenizer = tokenizer.general_preprocess(q_data)
 input_ids, gen_tokenizer = tokenizer.general_preprocess(new_q_data, gen_tokenizer)
+
+print(target_ids.shape)
+print(input_ids.shape)
+quit()
 
 train_input_ids, val_input_ids = data_preprocess.train_val_split(input_ids)
 # train_input_masks, val_input_masks = data_preprocess.train_val_split(input_masks)
@@ -59,7 +67,7 @@ train_img, val_img = data_preprocess.train_val_split(img_data)
 
 print("dataset build")
 buffer_size = len(train_input_ids)
-batch_size = 16
+batch_size = 32
 steps_per_epoch = len(train_input_ids) // batch_size
 vocab_tar_size = len(gen_tokenizer.word_index) + 1
 embedding_dim = 256
@@ -272,7 +280,10 @@ for epoch in range(EPOCHS):
   if eval_loss > eval_loss_after_epoch:
     eval_loss = eval_loss_after_epoch
     print("Model Saved with eval loss {}".format(eval_loss))
-    checkpoint.save(file_prefix=checkpoint_prefix.format(epoch+1))
+    checkpoint.save(file_prefix=checkpoint_prefix+"_eval")
+  elif (epoch + 1) % 10 == 0:
+    print("Model Saved")
+    checkpoint.save(file_prefix=checkpoint_prefix+"_epoch")
 
   print('Epoch {} Loss {:.4f}'.format(epoch + 1, total_loss / steps_per_epoch))
   print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
@@ -308,6 +319,7 @@ for i in range(len(val_input)):
   f.write(val_output[i] + '\n\n')
 f.close()
 
+'''
 # restore from best model on val
 checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 
@@ -327,3 +339,4 @@ for i in range(len(val_input)):
   f.write(val_target[i] + '\n')
   f.write(val_output[i] + '\n\n')
 f.close()
+'''

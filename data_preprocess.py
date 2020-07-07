@@ -61,10 +61,16 @@ def feature_path(img_path, name, fc):
   return os.path.join(p, new_name)
 
 
-def extract_img_feat(root, cate, img_data, name='res50', fc=False):
+def extract_img_feat(root, cate, img_data, name='res50', fc=False, extract_feature=True):
   # input: cate = vgg19 or res50
   #		   img_data = list of img_data
   # set the image model accoding to the name and fc config
+  if not extract_feature:
+    for i in range(len(img_data)):
+      img_data[i] = feature_path(os.path.join(root, cate, img_data[i]), name, fc)
+
+    return img_data
+
   img_model = get_model(name, fc)
 
   # load img function
