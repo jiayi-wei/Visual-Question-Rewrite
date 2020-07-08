@@ -16,16 +16,16 @@ exp_name = "res50_gen_token"
 
 # cate = "auto_annot"
 cate = "human_annot"
-with_visual = False
-# with_visual = True
+# with_visual = False
+with_visual = True
 
 # extract_feature = False
 extract_feature = True
 
 if with_visual:
-    exp_name += "_no_visual_"
-else:
     exp_name += "_visual_"
+else:
+    exp_name += "_no_visual_"
 
 exp_name += cate
 
@@ -49,10 +49,6 @@ img_data = data_preprocess.extract_img_feat(root,
 
 target_ids, gen_tokenizer = tokenizer.general_preprocess(q_data)
 input_ids, gen_tokenizer = tokenizer.general_preprocess(new_q_data, gen_tokenizer)
-
-print(target_ids.shape)
-print(input_ids.shape)
-quit()
 
 train_input_ids, val_input_ids = data_preprocess.train_val_split(input_ids)
 # train_input_masks, val_input_masks = data_preprocess.train_val_split(input_masks)
