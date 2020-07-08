@@ -38,7 +38,10 @@ fc_top = False
 
 print("data preprocessing")
 # q_data longer, new_q_data shorter
+
 q_data, new_q_data, img_data = data_preprocess.read_data(root, cate)
+
+target_ids, input_ids, img_data, gen_tokenizer = tokenizer.general_preprocess(q_data, new_q_data, img_data)
 
 img_data = data_preprocess.extract_img_feat(root,
                                             cate,
@@ -47,8 +50,8 @@ img_data = data_preprocess.extract_img_feat(root,
                                             fc=fc_top,
                                             extract_feature=extract_feature)
 
-target_ids, gen_tokenizer = tokenizer.general_preprocess(q_data)
-input_ids, gen_tokenizer = tokenizer.general_preprocess(new_q_data, gen_tokenizer)
+# target_ids, gen_tokenizer = tokenizer.general_preprocess(q_data)
+# input_ids, gen_tokenizer = tokenizer.general_preprocess(new_q_data, gen_tokenizer)
 
 train_input_ids, val_input_ids = data_preprocess.train_val_split(input_ids)
 # train_input_masks, val_input_masks = data_preprocess.train_val_split(input_masks)
