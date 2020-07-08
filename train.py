@@ -42,6 +42,9 @@ print("data preprocessing")
 q_data, new_q_data, img_data = data_preprocess.read_data(root, cate)
 
 target_ids, input_ids, img_data, gen_tokenizer = tokenizer.general_preprocess(q_data, new_q_data, img_data)
+print(target_ids.shape)
+print(input_ids.shape)
+print(len(img_data))
 
 img_data = data_preprocess.extract_img_feat(root,
                                             cate,

@@ -113,20 +113,20 @@ def general_preprocess(q_data, input_q_data, img_data):
   # max_len = max(all qs)
   tokens_q_data = gen_tokenizer.texts_to_sequences(q_data)
 
-  dict_ = {}
-  for t in tokens_q_data:
-    k = len(t) / 10
-    if k not in dict_.keys():
-      dict_[k] = 1
-    else:
-      dict_[k] += 1
+  q_data_ = []
+  input_q_data_ = []
+  img_data_ = []
+  for i in range(len(tokens_q_data)):
+    k = len(tokens_q_data[i]) // 10
+    if k <= 4:
+      q_data_.append(q_data[i])
+      input_q_data.append(input_q_data[i])
+      img_data_.append(img_data[i])
 
-  print(dict_)
-  quit()
-
+  tokens_q_data = gen_tokenizer.texts_to_sequences(q_data_)
   tokens_q_data = tf.keras.preprocessing.sequence.pad_sequences(tokens_q_data,
                                                          padding='post')
-  tokens_input_q_data = gen_tokenizer.texts_to_sequences(input_q_data)
+  tokens_input_q_data = gen_tokenizer.texts_to_sequences(input_q_data_)
   tokens_input_q_data = tf.keras.preprocessing.sequence.pad_sequences(tokens_input_q_data,
                                                               padding='post')
-  return tokens_q_data, tokens_input_q_data, img_data, gen_tokenizer
+  return tokens_q_data, tokens_input_q_data, img_data_, gen_tokenizer
