@@ -14,10 +14,10 @@ root = "./"
 
 exp_name = "res50_gen_token"
 
-# cate = "auto_annot"
-cate = "human_annot"
-# with_visual = False
-with_visual = True
+cate = "auto_annot"
+# cate = "human_annot"
+with_visual = False
+# with_visual = True
 
 # extract_feature = False
 extract_feature = True
@@ -45,6 +45,7 @@ target_ids, input_ids, img_data, gen_tokenizer = tokenizer.general_preprocess(q_
 print(target_ids.shape)
 print(input_ids.shape)
 print(len(img_data))
+# quit()
 
 img_data = data_preprocess.extract_img_feat(root,
                                             cate,
@@ -69,7 +70,7 @@ train_img, val_img = data_preprocess.train_val_split(img_data)
 
 print("dataset build")
 buffer_size = len(train_input_ids)
-batch_size = 32
+batch_size = 128
 steps_per_epoch = len(train_input_ids) // batch_size
 vocab_tar_size = len(gen_tokenizer.word_index) + 1
 embedding_dim = 256
