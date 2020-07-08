@@ -88,27 +88,45 @@ def bert_preprocess(qs, tokenizer):
 ######################
 
 
-def general_preprocess(qs, gen_tokenizer=None):
+def general_preprocess(q_data, input_q_data, img_data):
   # transfer the q_data into tokens
   # the input questino should be the output question (longer)
   # without tokenizer, build it
   # return tokens and tokenizer
 
-  qs = [preprocess_sentence(q) for q in qs]
-  qs = ['[CLS] ' + q + ' [SEP]' for q in qs]
+  q_data = [preprocess_sentence(q) for q in q_data]
+  q_data = ['[CLS] ' + q + ' [SEP]' for q in q_data]
 
-  print(qs[0])
+  input_q_data = [preprocess_sentence(q) for q in input_q_data]
+  input_q_data = ['[CLS] ' + q + ' [SEP]' for q in input_q_data]
 
-  if not gen_tokenizer:
-  	#build tokenizer
-    gen_tokenizer = tf.keras.preprocessing.text.Tokenizer(filters='',
+  print(q_data[0])
+  print(input_q_data[0])
+
+  #build tokenizer
+  gen_tokenizer = tf.keras.preprocessing.text.Tokenizer(filters='',
                                                            lower=False)
-    gen_tokenizer.fit_on_texts(qs)
-    gen_tokenizer.word_index['<pad>'] = 0
-    gen_tokenizer.index_word[0] = '<pad>'
+  gen_tokenizer.fit_on_texts(q_data)
+  gen_tokenizer.word_index['<pad>'] = 0
+  gen_tokenizer.index_word[0] = '<pad>'
   
   # max_len = max(all qs)
-  tokens = gen_tokenizer.texts_to_sequences(qs)
-  tokens = tf.keras.preprocessing.sequence.pad_sequences(tokens,
+  tokens_q_data = gen_tokenizer.texts_to_sequences(q_data)
+
+  dict_ = {}
+  for t in tokens_q_data:
+    k = len(t) / 10
+    if k not in dict_.keys():
+      dict_[k] = 1
+    else:
+      dict_[k] += 1
+
+  print(dict_)
+  quit()
+
+  tokens_q_data = tf.keras.preprocessing.sequence.pad_sequences(tokens_q_data,
                                                          padding='post')
-  return tokens, gen_tokenizer
+  tokens_input_q_data = gen_tokenizer.texts_to_sequences(input_q_data)
+  tokens_input_q_data = tf.keras.preprocessing.sequence.pad_sequences(tokens_input_q_data,
+                                                              padding='post')
+  return tokens_q_data, tokens_input_q_data, img_data, gen_tokenizer
