@@ -2,11 +2,11 @@ Train
 
 [CLS] can you please tell me dimensions ? [SEP]
 [CLS] beautiful kitchen . can you please tell me dimensions ? thanks ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] can you tell me what brand the pendants over the island are ? [SEP]
 [CLS] can you please please please tell me what brand the large black industrial pendants over the island are ? ! ? ! been looking for these everywhere for my new kitchen ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] would you mind sharing the source ? [SEP]
 [CLS] i love this backsplash ! would you mind sharing the source ? [SEP]
@@ -42,7 +42,7 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] where is the light fixture from ? [SEP]
 [CLS] where is the light fixture from ? looking for that look for our kitchen . please let me know where i can order . thanks ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 [CLS] what brand is the window ? [SEP]
 [CLS] does the window over the counter open ? would love it if it did ! ! what brand is it ? [SEP]
@@ -102,23 +102,23 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] what is the depth necessary for this feature ? [SEP]
 [CLS] what is the depth necessary for this feature ? thanks ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] where did these lights come from ? [SEP]
 [CLS] where did these lights come from ? thanks so much . i just love the lights , [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+are ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] where are the lights from ? [SEP]
 [CLS] love the bell shaped lights . where are they from ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+are ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] are the ceiling beams clad ? [SEP]
 [CLS] the center beam looks solid , are the ceiling beams clad ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+are ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] where are the table and chairs from ? [SEP]
 [CLS] the table and chairs are beautiful . where are they from ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+are ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] care to share the manufacturer name and model of the tile as well as the color and grout color used ? [SEP]
 [CLS] really like the arabesque tile above the stove wall . care to share the manufacturer name and model of the tile as well as the color and grout color used ? thanks ! [SEP]
@@ -146,7 +146,7 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] what is the material of the island countertop ? [SEP]
 [CLS] i would love to know the material of that beautiful kitchen island countertop . thank you ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] where can i get the lights ? [SEP]
 [CLS] love the lights over the island . where can i get them ? [SEP]
@@ -234,7 +234,7 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] what brand of bar stools these are ? [SEP]
 [CLS] would you mind sharing with me what brand of bar stools these are ? i love them ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] where i can purchase these lights ? [SEP]
 [CLS] love the hanging globe lites over dining table and island . . please tell me where i can purchase these lights . [SEP]
@@ -262,7 +262,7 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] is the wallpaper pink or coral ? [SEP]
 [CLS] love the wallpaper ! is this pink or coral ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] can you share the white cabinet paint ? [SEP]
 [CLS] very beautiful ! can you share the white cabinet paint ? thank you ! [SEP]
@@ -342,11 +342,11 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] what is make and color of countertops ? [SEP]
 [CLS] beautiful design , what is make and color of countertops please ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+[SEP] 
 
 [CLS] where did you get the light fixture ? [SEP]
 [CLS] beautiful light fixture over island , where did you get it ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+[SEP] 
 
 [CLS] where can i find this hardware ? [SEP]
 [CLS] hello , beautiful space . where can i find this hardware ? [SEP]
@@ -534,7 +534,7 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] where can i get this screen door ? [SEP]
 [CLS] where can i get this screen door ? i love your vibrant interiors ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i i 
 
 [CLS] where are the white upper cabinets from ? [SEP]
 [CLS] where are the white upper cabinets from ? love them ! [SEP]
@@ -630,7 +630,7 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] if this wood is quarter or rift sawn oak ? [SEP]
 [CLS] lovely kitchen ! can you tell me if this wood is quarter or rift sawn oak ? thank you for sharing ! [SEP]
-! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
+you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you 
 
 [CLS] what is the source of the pendent lights ? [SEP]
 [CLS] love the pendent lights ! what is the source ? please tell us the source of the pendent lights . thanks you . [SEP]
@@ -646,15 +646,15 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] who is the manufacture of the backsplash tile ? [SEP]
 [CLS] can i ask who is the manufacture of the backsplash tile ? thanks [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] where can i find the pendant lighting ? [SEP]
 [CLS] pendant lighting is beautiful , where can i find them ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] is the hood made of wood ? [SEP]
 [CLS] love the hood . is it made of wood ? ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] can you tell me more about the art and where to find ? [SEP]
 [CLS] love the art ! can you tell me more about and where to find ? thanks ! [SEP]
@@ -686,7 +686,7 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] where the shade came from ? [SEP]
 [CLS] we love the roman shade . can you tell us where they came from ? btw . this is one beautiful kitchen . [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 [CLS] who makes the cabinet pulls ? [SEP]
 [CLS] hi , lovely kitchen . can you tell me who makes the cabinet pulls ? [SEP]
@@ -722,15 +722,15 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] what are the dimensions of the room ? [SEP]
 [CLS] love this pantry . it s my dream pantry . what are the dimensions of the room ? thank you . [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 [CLS] could you please tell me the dimensions ? [SEP]
 [CLS] hi , love this butlers pantry . could you please tell me the dimensions ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 [CLS] what the greenish cabinet color is ? [SEP]
 [CLS] please let us know what the greenish cabinet color is , thanks ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 [CLS] is the grey tile glass or ceramic ? [SEP]
 [CLS] can you at least answer this . is the grey tile glass or ceramic ? [SEP]
@@ -810,15 +810,15 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] is this your crestwood series line ? [SEP]
 [CLS] beautiful kitchen . is this your crestwood series line ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+[SEP] 
 
 [CLS] what kind of wood is the dark cabinet ? [SEP]
 [CLS] what kind of wood is the cabinet ? would love it for my kitchen . [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+[SEP] 
 
 [CLS] what dark stain color did you use on the knotty alder ? [SEP]
 [CLS] what dark stain color did you use on the knotty alder ? it is a such a nice color ! thanks [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+[SEP] 
 
 [CLS] where to get the counter stools ? [SEP]
 [CLS] i love these kitchen counter stools . can you share where to get them ? [SEP]
@@ -850,11 +850,11 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] what color did you use for the top cabinets and finishes ? [SEP]
 [CLS] hello what color did you use for the top cabinets and finishes ? thank you [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you 
 
 [CLS] which finish did you use on the cabinets ? [SEP]
 [CLS] you did an exceptional job ! ! which finish did you use on the cabinets ? warm regards [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you 
 
 [CLS] what is the color of the tile ? [SEP]
 [CLS] love the backsplash . what is the color of the tile ? [SEP]
@@ -876,15 +876,15 @@ the the the the the the the the the the the the the the the the the the the the 
 
 [CLS] who is the manufacturer of the floors ? [SEP]
 [CLS] the floors are exactly what we want ! who is the manufacturer ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] can you share the name of the paint ? [SEP]
 [CLS] love the wall color . can you please share the name of the paint ? [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] what kind of window blinds these are ? [SEP]
 [CLS] could you tell me what kind of window blinds these are ? love the idea ! ! ! [SEP]
-the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the 
+? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 
 
 [CLS] where is the cabinet hardware from ? [SEP]
 [CLS] where is the cabinet hardware from ? love the finish ! beautiful work ! [SEP]

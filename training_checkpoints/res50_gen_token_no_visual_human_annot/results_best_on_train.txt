@@ -2,967 +2,967 @@ Train
 
 [CLS] can you please tell me dimensions ? [SEP]
 [CLS] beautiful kitchen . can you please tell me dimensions ? thanks ! [SEP]
-beautiful kitchen . can you please tell me dimensions ? thanks ! [SEP] 
+love this butlers pantry . can you please tell me who makes this faucet ? thanks ! [SEP] 
 
 [CLS] can you tell me what brand the pendants over the island are ? [SEP]
 [CLS] can you please please please tell me what brand the large black industrial pendants over the island are ? ! ? ! been looking for these everywhere for my new kitchen ! [SEP]
-can you please please please tell me what brand the large black industrial pendants over the island are ? ! been looking for these everywhere for my new kitchen ! ! been looking for these everywhere for my new kitchen ! ! been looking for these everywhere for 
+can you tell me the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source 
 
 [CLS] would you mind sharing the source ? [SEP]
 [CLS] i love this backsplash ! would you mind sharing the source ? [SEP]
-i love this backsplash ! would you mind sharing the source ? [SEP] 
+love the source ? [SEP] 
 
 [CLS] would you share source for sliding doors ? [SEP]
 [CLS] would you please share your source for your so big sliding doors ? [SEP]
-would you please share your source for your so big sliding doors ? [SEP] 
+love the whole thing is stunning ! [SEP] 
 
 [CLS] who made the cabinets ? [SEP]
 [CLS] the cabinets are beautiful . who made them please ? [SEP]
-the cabinets are beautiful . who made them please ? [SEP] 
+love the whole look of the counter made of bar stools are the counter made of bar stools are the counter made of bar stools are the counter made of bar stools are the counter made of bar stools are the counter made of bar stools are the 
 
 [CLS] what is the color of the cabinets ? [SEP]
 [CLS] love this kitchen , great eye for the designer . what is the color of the grey cabinets ? [SEP]
-love the designer . what is the color of the grey cabinets ? [SEP] 
+what is the cabinets ? [SEP] 
 
 [CLS] is the hardware polished chrome or nickel ? [SEP]
 [CLS] is the hardware polished chrome or nickel ? i could not find any information on the hardware amongst all the questions . thank you so much . this is a beautiful kitchen . [SEP]
-is the hardware amongst all the questions . thank you so much . i could not find any information on the hardware amongst all the questions . thank you so much . i could not find any information on the hardware amongst all the questions . thank you 
+where is the light fixture . [SEP] 
 
 [CLS] what is the color of stain on dark cabinets ? is this a custom color ? [SEP]
 [CLS] the stain on the dark cabinets is stunning . is this a custom color and if so , what is it ? thank you . [SEP]
-what is the grey cabinets ? thank you . [SEP] 
+what is the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the 
 
 [CLS] what material and color are the countertops ? [SEP]
 [CLS] beautiful kitchen ! what material and color are the countertops ? thanks . [SEP]
-love the countertops ? thanks . [SEP] 
+what color is it ? [SEP] 
 
 [CLS] what color is walls ? [SEP]
 [CLS] love the color of walls . what color is it ? [SEP]
-love the color of walls . what color is it ? [SEP] 
+what color is it ? [SEP] 
 
 [CLS] where is the light fixture from ? [SEP]
 [CLS] where is the light fixture from ? looking for that look for our kitchen . please let me know where i can order . thanks ! [SEP]
-where is the light fixture from ? looking for that look for our kitchen . please let me know where i can order . thanks ! [SEP] 
+where are the light fixture from ? [SEP] 
 
 [CLS] what brand is the window ? [SEP]
 [CLS] does the window over the counter open ? would love it if it did ! ! what brand is it ? [SEP]
-does the window over the counter open ? would love it if it did ! [SEP] 
+what is the counter open ? [SEP] 
 
 [CLS] where did the dish towels come from ? [SEP]
 [CLS] where did the dish towels come from ? i ve seen them on other houzz sites before but have forgotten where i can locate them . thank you for your help . [SEP]
-where did the dish towels come from ? i ve seen them on other houzz sites before but have forgotten where i can locate them . thank you for your help . [SEP] 
+where did the dish towels come from ? i just love the leaded glass or generally speaking , how much space . [SEP] 
 
 [CLS] what type and are the windows ? [SEP]
 [CLS] love this kitchen ! are the windows on right and left of stove awning type ? who is the manufacturer ? thank you . [SEP]
-love this kitchen ! who is the manufacturer ? thank you . [SEP] 
+what is the flooring ? [SEP] 
 
 [CLS] who makes the cheese board on the island ? [SEP]
 [CLS] who makes the pretty cheese board on the island ? the kitchen is gorgeous . thanks for sharing it ! [SEP]
-who makes the pretty cheese board on the island ? the pretty cheese board on the island ? the pretty cheese board on the island ? the pretty cheese board on the island ? the pretty cheese board on the island ? the pretty cheese board on the 
+i love the island ? [SEP] 
 
 [CLS] what is the cabinet material and finish ? [SEP]
 [CLS] what is the cabinet material and finish ? thanks ! beautiful ! gorgeous work ! [SEP]
-what is the cabinet material and finish ? thanks ! what is the cabinet material and finish ? thanks ! what is the cabinet material and finish ? thanks ! what is the cabinet material and finish ? thanks ! what is the cabinet material and finish ? 
+what is the counter top material and color ? [SEP] 
 
 [CLS] what type of wood are the beams ? ? [SEP]
 [CLS] what type of wood are the beams ? ? lovely space ! we re starting the renovation of our yr old home ! i hope our kitchen is as beautiful as this space ! [SEP]
-what type of wood are the beams ? ? lovely space ! i hope our kitchen is as beautiful as this space ! [SEP] 
+what brick was used in our yr old home ! ! [SEP] 
 
 [CLS] who makes the light fixture ? [SEP]
 [CLS] who makes the light fixture ? almost got overlooked . i m glad i noticed . what a gem ! [SEP]
-who makes the light fixture ? almost got overlooked . i m glad i noticed . what a gem ! [SEP] 
+where is it ! [SEP] 
 
 [CLS] where the lights over the island can be found ? [SEP]
 [CLS] i would love to know where the cool lights over the island can be found . thanks ! [SEP]
-i would love to know where the cool lights over the island can be found . thanks ! [SEP] 
+i love the island ? [SEP] 
 
 [CLS] would you share the source for the barstools ? [SEP]
 [CLS] wow beautiful your work is stunning ! ! would you be willing to share the source for the barstools please ? [SEP]
-wow beautiful your work is stunning ! ! would you be willing to share the source for the barstools please ? [SEP] 
+can you share the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for 
 
 [CLS] where to buy the backsplash ? [SEP]
 [CLS] love this backsplash . do you have information on where to buy ? [SEP]
-love this backsplash . do you have information on where to buy ? [SEP] 
+love this backsplash . can you tell me where to get this ? [SEP] 
 
 [CLS] where i can purchase the clock ? [SEP]
 [CLS] i love the clock above the cabinets . any ideas where i can purchase it or something similar ? [SEP]
-i love it ? [SEP] 
+i love it ? thanks [SEP] 
 
 [CLS] what the room dimensions are of the kitchen and the size of the island ? [SEP]
 [CLS] beautiful kitchen ! could you please tell me what the room dimensions are of this kitchen and also the size of the kitchen island ? [SEP]
-beautiful kitchen ! could you please tell me what the room dimensions are of this kitchen and also the size of the kitchen island ? [SEP] 
+love the size of the island and the stainless drawers ? thank you ! [SEP] 
 
 [CLS] what kind of wood did you use and who made it ? [SEP]
 [CLS] love how you used wood for the kitchen island ! what kind of wood did you use and who made it ? [SEP]
-love how you used wood for the kitchen island ? [SEP] 
+what kind of wood color used ? [SEP] 
 
 [CLS] what are the dimensions of this island and how much of an overhang did you use for the seating ? [SEP]
 [CLS] hi , lovely space ! ! what are the dimensions of this island and how much of an overhang did you use for the seating ? many thanks in advance ! [SEP]
-hi , lovely space ! ! what are the dimensions of this island and how much of an overhang did you use for the seating ? many thanks in advance ! [SEP] 
+i d like to try to try to try to replicate this setup . what are the manufacturer of the manufacturer of the manufacturer of the manufacturer of the manufacturer of the manufacturer of the manufacturer of the manufacturer of the manufacturer of the manufacturer of the manufacturer 
 
 [CLS] what is the depth necessary for this feature ? [SEP]
 [CLS] what is the depth necessary for this feature ? thanks ! [SEP]
-what is the depth necessary for this feature ? thanks ! [SEP] 
+what is the counter open ? [SEP] 
 
 [CLS] where did these lights come from ? [SEP]
 [CLS] where did these lights come from ? thanks so much . i just love the lights , [SEP]
-where did these lights come from ? thanks so much . i just love the lights come from ? thanks so much . i just love the lights come from ? thanks so much . i just love the lights come from ? thanks so much . i 
+where did the dish towels come from ? i just love the leaded glass or generally speaking , where i love them ! thank you for taking the dish towels come from ? i just love the leaded glass or generally speaking , where i love them ! 
 
 [CLS] where are the lights from ? [SEP]
 [CLS] love the bell shaped lights . where are they from ? [SEP]
-love the bell shaped lights . where are they from ? [SEP] 
+where are the light fixture from ? [SEP] 
 
 [CLS] are the ceiling beams clad ? [SEP]
 [CLS] the center beam looks solid , are the ceiling beams clad ? [SEP]
-the center beam looks solid , are the ceiling beams clad ? [SEP] 
+are these in our kitchen ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
 
 [CLS] where are the table and chairs from ? [SEP]
 [CLS] the table and chairs are beautiful . where are they from ? [SEP]
-the table and chairs are beautiful . where are they from ? [SEP] 
+i love the table and where are they from ? [SEP] 
 
 [CLS] care to share the manufacturer name and model of the tile as well as the color and grout color used ? [SEP]
 [CLS] really like the arabesque tile above the stove wall . care to share the manufacturer name and model of the tile as well as the color and grout color used ? thanks ! [SEP]
-really like the arabesque tile above the stove wall . care to share the manufacturer name and model of the tile as well as the color and grout color used ? thanks ! [SEP] 
+super fun and unique kitchen and grout color and grout color and grout color and grout color and grout color and grout color and grout color and grout color and grout color and grout color and grout color and grout color and grout color and grout color and 
 
 [CLS] do you have information about the stove and range ? [SEP]
 [CLS] this entire home has a welcoming feel to it . great design ! do you have information about the stove and range ? many thanks for making time to reply ! [SEP]
-this entire home has a welcoming feel to it . great design ! do you have information about the stove and range ? many thanks for making time to reply ! [SEP] 
+the stove and range ? thank you ! [SEP] 
 
 [CLS] what brand is the refrigerator ? [SEP]
 [CLS] love the counter . depth refrigerator . what brand is it please ? thanks . [SEP]
-love the counter . what brand is it please ? thanks . [SEP] 
+what is the counter open ? [SEP] 
 
 [CLS] how was the coordinating tile at the bottom of the range hood created ? [SEP]
 [CLS] love the unique range hood ! how was the coordinating tile at the bottom of the range hood created ? [SEP]
-love the unique range hood ! how was the coordinating tile at the bottom of the range hood created ? [SEP] 
+love the range hood created ? [SEP] 
 
 [CLS] could you give information on the island pendants ? [SEP]
 [CLS] could you please give information on the island pendants ? thank you ! [SEP]
-could you please give information on the island pendants ? thank you ! [SEP] 
+the barstools please ? thanks ! [SEP] 
 
 [CLS] who makes the pendant lights and chandelier ? [SEP]
 [CLS] i love the pendant lights and chandelier in the nook . who makes those [SEP]
-i love the pendant lights and chandelier in the nook . who makes those [SEP] 
+i love the counter stools . [SEP] 
 
 [CLS] what is the material of the island countertop ? [SEP]
 [CLS] i would love to know the material of that beautiful kitchen island countertop . thank you ! [SEP]
-i love the island countertop . thank you ! [SEP] 
+love the manufacturer of the island ? [SEP] 
 
 [CLS] where can i get the lights ? [SEP]
 [CLS] love the lights over the island . where can i get them ? [SEP]
-love the lights over the island . where can i get one ? thanks ! [SEP] 
+where can i get the rug . can i get them ? [SEP] 
 
 [CLS] who is the manufacturer of the chairs and where can i purchase the chairs ? [SEP]
 [CLS] love these chairs ! who is the manufacturer and where can i purchase them ? they seem to be a perfect size and different than other stools and counter stools offered . [SEP]
-love these chairs ! who is the manufacturer and where can i purchase them ? they seem to be a perfect size and different than other stools and counter stools offered . [SEP] 
+i am looking to be a perfect size and different than other stools offered . [SEP] 
 
 [CLS] where did you purchase the floor ? [SEP]
 [CLS] hi , where did you purchase the floor ? is it laminate or tile . love [SEP]
-hi , where did you purchase the floor ? is it laminate or tile . love [SEP] 
+where did you get the floor ? [SEP] 
 
 [CLS] where was the island purchased ? [SEP]
 [CLS] we like the island . where was that purchased ? [SEP]
-where was that purchased ? [SEP] 
+where to date . thank you ! [SEP] 
 
 [CLS] where was the light purchased ? [SEP]
 [CLS] where was the light above the sink purchased ? it would work well in our kitchen too . [SEP]
-where was the light above the sink purchased ? it would work well in our kitchen too . [SEP] 
+where are the light fixture ? [SEP] 
 
 [CLS] what kind of tile is the backsplash ? [SEP]
 [CLS] love the backsplash used behind the stove . what kind of tile is it ? thanks [SEP]
-love the backsplash used behind the stove . what kind of tile is it ? thanks [SEP] 
+love the color of the cabinets ? [SEP] 
 
 [CLS] what is the color of the island ? [SEP]
 [CLS] what is the exact color of the island ? i love how dark it is , but still brownish . [SEP]
-what is the exact color of the island ? i love this is , but still brownish . [SEP] 
+love the pendent lights . what is the dimensions of the kitchen ! [SEP] 
 
 [CLS] what color are the cabinets ? [SEP]
 [CLS] what color are the cabinets ? i love the cabinet color [SEP]
-i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the 
+what color is it is the cabinets ? [SEP] 
 
 [CLS] can you tell me who makes the appliances ? [SEP]
 [CLS] can you please tell me who makes the appliances ? thanks [SEP]
-can you please tell me who makes the appliances ? thanks [SEP] 
+can you tell me who makes the floor ? [SEP] 
 
 [CLS] do you recall what color you painted the crown molding ? [SEP]
 [CLS] this may be the only question you have not answered , but i like the contrast between the winds breath and the crown molding . do you recall what color you painted the crown molding ? thank you ! [SEP]
-this may be the only question you have not answered , but i like the contrast between the winds breath and the crown molding . do you recall what color you painted the crown molding . do you recall what color you painted the crown molding . do 
+love the contrast between the winds breath and color did you use for your work ! [SEP] 
 
 [CLS] what is the counter top material and color ? [SEP]
 [CLS] what is the counter top material and color ? beautiful kitchen ! [SEP]
-what is the counter top material and color ? beautiful kitchen ! what is the counter top material and color ? beautiful kitchen ! what is the counter top material and color ? beautiful kitchen ! what is the counter top material and color ? beautiful kitchen ! 
+what is the counter made of the counter open ? [SEP] 
 
 [CLS] what is the wall color ? [SEP]
 [CLS] beautiful kitchen ! what is the wall color ? [SEP]
-beautiful kitchen ! what is the wall color ? [SEP] 
+what is the counter top material ? [SEP] 
 
 [CLS] can you please tell me the who makes these lovely floor tiles ? [SEP]
 [CLS] hi , can you please tell me the who makes these lovely floor tiles ? i would also love the name of the style . thanks ! ! [SEP]
-hi , can you please tell me the who makes these lovely floor tiles ? i would also love the name of the style . thanks ! [SEP] 
+hi , can you tell me the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of 
 
 [CLS] can you share the source and finish of the cabinet hardware ? [SEP]
 [CLS] super fun and unique kitchen ! can you share the source and finish of the cabinet hardware ? thanks ! [SEP]
-super fun and unique kitchen ! can you share the source and finish of the cabinet hardware ? thanks ! [SEP] 
+love the cabinet hardware ? [SEP] 
 
 [CLS] can you tell me the manufacturer of the cabinets please ? [SEP]
 [CLS] can you tell me the manufacturer of the cabinets please ? i would love to use these cabinets and color for my kitchen remodel . it s beautiful ! [SEP]
-can you tell me the manufacturer of the cabinets please ? i m trying to replicate this look of the cabinets please ? i m trying to replicate this look of the cabinets please ? i m trying to replicate this look of the cabinets please ? i 
+can you tell me the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source 
 
 [CLS] what color glaze was used over the white cabinets ? [SEP]
 [CLS] this kitchen is beautiful ! my cabinet maker is trying to replicate this color and is not getting it right . what color glaze was used over the white cabinets ? [SEP]
-this kitchen is beautiful ! my cabinet maker is trying to replicate this color and is not getting it right . what color glaze was used over the white cabinets ? [SEP] 
+what color is the cabinets ? [SEP] 
 
 [CLS] where can i find the corbels ? [SEP]
 [CLS] where can i find the corbels ? i just love them . thank you [SEP]
-where can i find the corbels ? i just love them . thank you [SEP] 
+where did the dish towels come from ? i just love the leaded glass or generally speaking , where i love your help . [SEP] 
 
 [CLS] can you tell me the name of the medallions on the back splash ? [SEP]
 [CLS] can you tell me the name of the medallions on the back splash ? i m trying to replicate this look . love it ! [SEP]
-can you tell me the name of the medallions on the back splash ? i m trying to replicate this look . love this look . love this look . love this look . love this look . love this look . love this look . love this 
+can you tell me the manufacturer ? [SEP] 
 
 [CLS] what kind of tile is used for the backsplash ? [SEP]
 [CLS] kitchen is beautifully put together . what kind of tile is used for the backsplash ? [SEP]
-kitchen is beautifully put together . what kind of tile is used for the backsplash ? [SEP] 
+love the color of the cabinets ? [SEP] 
 
 [CLS] could you please let provide information about the tiles used ? [SEP]
 [CLS] this kitchen is gorgeous ! could you please let provide information about the tiles used ? the whole thing is amazing . [SEP]
-this kitchen is gorgeous ! could you please let provide information about the tiles used ? the whole thing is amazing . [SEP] 
+love the tiles used ? [SEP] 
 
 [CLS] can you please tell me where or the name of the knobs and kitchen sink ? [SEP]
 [CLS] i love this kitchen ! can you please tell me where or the name of the knobs and kitchen sink ? thanks in advance [SEP]
-i love this kitchen ! can you please tell me where or the name of the knobs and kitchen sink ? thanks in advance [SEP] 
+can you tell me the manufacturer of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name 
 
 [CLS] what brand of bar stools these are ? [SEP]
 [CLS] would you mind sharing with me what brand of bar stools these are ? i love them ! [SEP]
-would you mind sharing with me what brand of bar stools these are ? i love them ! [SEP] 
+are these are the fireplace [SEP] 
 
 [CLS] where i can purchase these lights ? [SEP]
 [CLS] love the hanging globe lites over dining table and island . . please tell me where i can purchase these lights . [SEP]
-love the hanging globe lites over dining table and island and island and island and island and island and island and island and island and island and island and island and island and island and island and island and island and island and island and island and island 
+where can i find it ! [SEP] 
 
 [CLS] where did you buy the appliance pulls ? [SEP]
 [CLS] beautiful kitchen . where did you buy the appliance pulls ? love them [SEP]
-where did you buy the appliance pulls ? love them [SEP] 
+where did you get the orange roundels for our coastal colors . where did you get the orange roundels for our coastal colors . where did you get the orange roundels for our coastal colors . where did you get the orange roundels for our coastal colors . 
 
 [CLS] what is the wall color around the windows ? [SEP]
 [CLS] what is the wall color around the windows ? it is beautiful . [SEP]
-what is the wall color around the windows ? [SEP] 
+love the backsplash tile ? [SEP] 
 
 [CLS] do you know where the lights are from ? [SEP]
 [CLS] love these , do you know where the lights are from ? beautiful kitchen ! [SEP]
-love these , do you know where the lights are from ? beautiful kitchen ! [SEP] 
+where are the light fixture from ? [SEP] 
 
 [CLS] where this tile is from ? [SEP]
 [CLS] could you tell me where this tile is from ? looks great ! [SEP]
-could you tell me where this tile is from ? looks great ! [SEP] 
+love this kitchen ! ! [SEP] 
 
 [CLS] what brick was used for the fireplace ? [SEP]
 [CLS] what brick was used for the fireplace ? thank you ! ! looking to create a similar fireplace [SEP]
-what brick was used for the fireplace ? thank you ! ! looking to create a similar fireplace [SEP] 
+are the fireplace [SEP] 
 
 [CLS] is the wallpaper pink or coral ? [SEP]
 [CLS] love the wallpaper ! is this pink or coral ? [SEP]
-love the wallpaper ! is this pink or coral ? [SEP] 
+what company built the booth ? [SEP] 
 
 [CLS] can you share the white cabinet paint ? [SEP]
 [CLS] very beautiful ! can you share the white cabinet paint ? thank you ! [SEP]
-very beautiful ! can you share the white cabinet paint ? thank you ! [SEP] 
+love the cabinet ? [SEP] 
 
 [CLS] do you know the specifics on the grout color and spacing ? [SEP]
 [CLS] love the grout and tile position . do you know the specifics on the grout color and spacing ? thank you . [SEP]
-love the grout and tile position . do you know the specifics on the grout color and spacing ? thank you . [SEP] 
+love the grout color and grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout and the grout 
 
 [CLS] what is the wood of the floor ? [SEP]
 [CLS] the floor is beautiful . what is the wood ? thank you ! [SEP]
-the floor is beautiful . what is the wood ? thank you ! [SEP] 
+what is the flooring ? [SEP] 
 
 [CLS] can you share the source for the range hood ? [SEP]
 [CLS] can you share the source for the range hood ? i love the range hood . so simple , but it looks custom . [SEP]
-can you share the source for the range hood ? i love the range hood ? i love the range hood ? i love the range hood ? i love the range hood ? i love the range hood ? i love the range hood ? i love 
+love the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source 
 
 [CLS] can you share some details on the tile ? [SEP]
 [CLS] backsplash looks great . and love how you continued it up into the cabinet . can you share some details on the tile ? [SEP]
-backsplash looks great . and love how you continued it up into the cabinet . can you share some details on the tile ? [SEP] 
+beautiful kitchen ! [SEP] 
 
 [CLS] what tile you have on the backsplash ? [SEP]
 [CLS] your room is beautiful ! would you kindly tell me what tile you have on the backsplash ? thank you [SEP]
-your room is beautiful ! would you kindly tell me what tile you have on the backsplash ? thank you [SEP] 
+love the color of the cabinets ? [SEP] 
 
 [CLS] who is the manufacturer on the cabinets ? [SEP]
 [CLS] beautiful kitchen . who is the manufacturer on the cabinets ? i just ask because i saw that you said it s a stock white and i really like it ! thanks in advance . [SEP]
-beautiful kitchen . who is the manufacturer on the cabinets ? i just ask because i saw that you said it s a stock white and i really like it ! thanks in advance . [SEP] 
+i love the island pendants ? [SEP] 
 
 [CLS] where is the pendant light from ? [SEP]
 [CLS] the pendant light looks fantastic . where is it from , please ? [SEP]
-where is it from , please ? [SEP] 
+where is the light fixture ? [SEP] 
 
 [CLS] is the paint blue or black ? [SEP]
 [CLS] is the paint blue or black ? please specify the paint color if you still have it . love the kitchen ! [SEP]
-is the paint blue or black ? please specify the paint blue or black ? please specify the paint blue or black ? please specify the paint blue or black ? please specify the paint blue or black ? please specify the paint blue or black ? please 
+what is the countertops blue or black . what is the countertops blue or black . what is the countertops blue or black . what is the countertops blue or black . what is the countertops blue or black . what is the countertops blue or black . 
 
 [CLS] what are the dimensions of the hood ? [SEP]
 [CLS] what are the dimensions of the hood ? beautiful design all around ! [SEP]
-what are the dimensions of the hood ? beautiful design all around ! [SEP] 
+what is the countertops blue granite ? [SEP] 
 
 [CLS] what color are the cabinets ? [SEP]
 [CLS] i love the soft look of the cabinets . what color are they ? [SEP]
-i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the soft look of the cabinets ? i love the 
+what color is it is the cabinets ? [SEP] 
 
 [CLS] any chance i could get manufacture , wood type colour ? [SEP]
 [CLS] love the wood floors in kitchen . any chance i could get manufacture , wood type colour ? many thanks [SEP]
-love the wood floors in kitchen . any chance i could get manufacture , wood type colour ? many thanks [SEP] 
+hello , how much space . thank you please tell me where did the dish towels come from ? i just love the leaded glass or generally speaking , how much space . thank you please tell me where did the dish towels come from ? i just 
 
 [CLS] can you tell me color of kitchen cabinets ? [SEP]
 [CLS] love this house ! can you tell me color of kitchen cabinets ? [SEP]
-love this house ! can you tell me color of kitchen cabinets ? [SEP] 
+love the color of subway tile you [SEP] 
 
 [CLS] any information on the floor ? [SEP]
 [CLS] any information on the floor ? great looking space ! [SEP]
-any information on the floor ? great looking space ! [SEP] 
+what is the counter open ? [SEP] 
 
 [CLS] what is the wall paint color ? [SEP]
 [CLS] beautiful kitchen ! what is the wall paint color ? thanks ! [SEP]
-beautiful kitchen ! what is the wall paint color ? thanks ! [SEP] 
+what is the wall color of the wall color of the wall color of the wall color of the wall color of the wall color of the wall color of the wall color of the wall color of the wall color of the wall color of the wall 
 
 [CLS] would you please share the cabinet and wall paint color ? [SEP]
 [CLS] would you please share the cabinet and wall paint color ? i really appreciate it . [SEP]
-would you please share the cabinet and wall paint color ? i really appreciate it and wall paint color ? i really appreciate it and wall paint color ? i really appreciate it and wall paint color ? i really appreciate it and wall paint color ? i 
+love the cabinet and color of the cabinet color and color and color and color used ? [SEP] 
 
 [CLS] would you share the type and color of this floor ? [SEP]
 [CLS] would you share the type and color of this floor ? it s beautiful . [SEP]
-would you share the type and color of this floor ? it s beautiful . would you be willing to share the type and color of this floor ? it s beautiful . would you be willing to share the type and color of this floor ? it 
+love the cabinet color used ? [SEP] 
 
 [CLS] what is the flooring ? [SEP]
 [CLS] beautiful kitchen ! what is the flooring ? [SEP]
-beautiful kitchen ! what is the flooring ? [SEP] 
+what is the flooring ? [SEP] 
 
 [CLS] tell us the cabinet finish colors . [SEP]
 [CLS] please tell us the cabinet finish colors . thank you so much ! ! have a blessed day [SEP]
-please tell us the cabinet finish colors . thank you so much ! ! have a blessed day [SEP] 
+love the contrast between the winds breath and the crown molding ? thank you ! [SEP] 
 
 [CLS] what is make and color of countertops ? [SEP]
 [CLS] beautiful design , what is make and color of countertops please ? [SEP]
-beautiful design , what is make and color of countertops please ? [SEP] 
+what color is it ? [SEP] 
 
 [CLS] where did you get the light fixture ? [SEP]
 [CLS] beautiful light fixture over island , where did you get it ? [SEP]
-beautiful light fixture over island , where did you get it ? [SEP] 
+where did you get the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over 
 
 [CLS] where can i find this hardware ? [SEP]
 [CLS] hello , beautiful space . where can i find this hardware ? [SEP]
-hello , beautiful space . where can i find this hardware ? [SEP] 
+where can i find it ! [SEP] 
 
 [CLS] where did you get the orange roundels for the leaded glass ? [SEP]
 [CLS] where did you get the orange roundels for the leaded glass ? i m desperately looking for small glass roundels . help , please . [SEP]
-where did you get the orange roundels for the leaded glass ? i m desperately looking for small glass roundels . help , help . help , help . help , help . help , help . help , help . help , help . help , help 
+where did you get the leaded glass or generally speaking , where did you get the leaded glass or generally speaking , where did you get the leaded glass or generally speaking , where did you get the leaded glass or generally speaking , where did you get 
 
 [CLS] could you share the color used on the cabinets ? [SEP]
 [CLS] love the cabinet color ! could you share the color used on the cabinets ? thanks [SEP]
-love the cabinet color ! could you share the color used on the cabinets ? thanks [SEP] 
+love the color used on the cabinets ? [SEP] 
 
 [CLS] can you tell me the manufacturer ? [SEP]
 [CLS] great use of the steel truss can you tell me the manufacturer ? [SEP]
-great use of the steel truss can you tell me the manufacturer ? [SEP] 
+can you tell me the cabinets ? [SEP] 
 
 [CLS] what are the dimensions of the space including the sitting room ? [SEP]
 [CLS] what are the dimensions of the space including the sitting room ? this is the greatest kitchen on the entire houzz website . thank you so much we are going to try to replicate it . [SEP]
-what are the dimensions of the space including the sitting room ? thank you so much we are going to try to replicate it . [SEP] 
+love the pendent lights . what are the dimensions of the kitchen ! what is the pendent lights . what are the dimensions of the kitchen ! what is the pendent lights . what are the dimensions of the kitchen ! what is the pendent lights . what 
 
 [CLS] how long the table was and where are the chairs ? [SEP]
 [CLS] hi i was interested in how long the table was and where are the chairs ? [SEP]
-hi i was interested in how long the table was and where are the chairs ? [SEP] 
+i am looking to be a table and where to be a table and where to be a table and where to be a table and where to be a table and where to be a table and where to be a table and where to be a 
 
 [CLS] what is the lighting ? [SEP]
 [CLS] what is the lighting ? it s an interesting way to deal with an open ceiling . [SEP]
-what is the lighting ? [SEP] 
+what is the counter made of wood is the counter open ceiling . [SEP] 
 
 [CLS] what are the cabinets with the wood top and the stainless drawers ? [SEP]
 [CLS] i m planning a combination of stainless and wood , and love yours . what are the cabinets with the wood top and the stainless drawers ? thank you ! [SEP]
-i m planning a combination of stainless and wood , and love yours . what are the cabinets with the wood top and the stainless drawers ? thank you ! [SEP] 
+love the kitchen island and the stainless drawers ? thank you ! [SEP] 
 
 [CLS] what is the colour of the wall ? [SEP]
 [CLS] can you tell me what is the color of the wall ? thank you [SEP]
-can you tell me what is the color of the wall ? thank you [SEP] 
+love the backsplash ? [SEP] 
 
 [CLS] what is the maker and color of the tile ? [SEP]
 [CLS] love the backsplash tile . what is the maker and color of the tile ? [SEP]
-love the backsplash tile . what is the maker and color of the tile ? [SEP] 
+what is the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the 
 
 [CLS] is there any ordering information regards to the counter stools ? [SEP]
 [CLS] the featured stools are perfect . is there any ordering information that can be shared with regards to the counter stools ? thanks in advance . [SEP]
-the featured stools are perfect . is there any ordering information that can be shared with regards to the counter stools ? thanks in advance . [SEP] 
+hi , can you tell me where to find the post columns on the table ? [SEP] 
 
 [CLS] where did you purchase the cabinets from ? [SEP]
 [CLS] where did you purchase the cabinets from ? absolutely love them ! ! ! [SEP]
-where did you purchase the cabinets from ? absolutely love them ! ! ! [SEP] 
+where did you get the cabinets from ? [SEP] 
 
 [CLS] what brand appliances did you use ? [SEP]
 [CLS] gorgeous ! what brand appliances did you use ? thanks ! [SEP]
-gorgeous ! what brand appliances did you use ? thanks ! [SEP] 
+love the color is used ? [SEP] 
 
 [CLS] what is name of tile ? [SEP]
 [CLS] tile looks great with both counter and cabinets . what is name of tile ? [SEP]
-tile looks great with both counter and cabinets . what is name of tile ? [SEP] 
+what is the color is the counter tops ? thank you . [SEP] 
 
 [CLS] what s the name of the countertops ? [SEP]
 [CLS] love the countertops are they marble if so what s the name of it [SEP]
-love the countertops are they marble if so what s the name of it [SEP] 
+love the pendent lights . what is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name 
 
 [CLS] what is the brand and color ? [SEP]
 [CLS] love this warm grey . what is the brand and color ? thanks . [SEP]
-love the counters . what is the brand and color ? thanks . [SEP] 
+what brand and color ? [SEP] 
 
 [CLS] where you purchased these appliances pulls ? [SEP]
 [CLS] can you please tell me where you purchased these appliances pulls ! thanks ! [SEP]
-can you please tell me where you purchased these appliances pulls ! thanks ! [SEP] 
+love the rug ! [SEP] 
 
 [CLS] what is the countertop material ? [SEP]
 [CLS] i love this kitchen . what is the countertop material ? [SEP]
-i love this kitchen . what is the countertop material ? [SEP] 
+what is the counter open ? [SEP] 
 
 [CLS] what is the counter made of and what style color was used ? [SEP]
 [CLS] i love the counters . what is the counter made of and what style color was used ? thanks ! [SEP]
-i love the counters . what is the counter made of and what style color was used ? thanks ! [SEP] 
+what brand and color of the counter made of the counter made of the counter made of the counter made of the counter made of the counter made of the counter made of the counter made of the counter made of the counter made of the counter made 
 
 [CLS] where you got this hood ? [SEP]
 [CLS] beautiful hood ! ! hi , can you tell me where you got this beautiful hood ? thank you ! [SEP]
-beautiful hood ! ! hi , can you tell me where you got this beautiful hood ! ! hi , can you tell me where you got this beautiful hood ! ! hi , can you tell me where you got this beautiful hood ! ! hi , 
+love this backsplash tile available at ? [SEP] 
 
 [CLS] what is the name of the kitchen granite ? [SEP]
 [CLS] new kitchen . love the granite ! what is the name of the kitchen granite ? [SEP]
-new kitchen . what is the name of the kitchen granite ? [SEP] 
+love the pendent lights . what is the island ? [SEP] 
 
 [CLS] can you tell me what the drawer pulls are called ? [SEP]
 [CLS] i like the drawer pulls . can you tell me what they are called ? [SEP]
-i like the drawer pulls . can you tell me what they are called ? [SEP] 
+can you tell me the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source 
 
 [CLS] what is the flooring and what is the stain ? [SEP]
 [CLS] love the flooring . what is it and what is the stain ? [SEP]
-love the flooring . what is it and what is the stain ? [SEP] 
+what is the wall ? thank you . [SEP] 
 
 [CLS] what is the brand of sink ? [SEP]
 [CLS] love the sink . what is the brand of sink ? [SEP]
-love the sink ? [SEP] 
+what is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of 
 
 [CLS] are those windows behind the glass front cabinets ? [SEP]
 [CLS] are those windows behind the glass front cabinets ? thanks in advance for your reply . beautiful kitchen ! [SEP]
-are those windows behind the glass front cabinets ? thanks in advance for your reply . [SEP] 
+are the center beam looks solid , are the fireplace [SEP] 
 
 [CLS] what brand and color are the counter tops ? [SEP]
 [CLS] what brand and color are the counter tops ? hoping to do the same . [SEP]
-what brand and color are the counter tops ? hoping to do the same . [SEP] 
+what brand is it ? [SEP] 
 
 [CLS] what is the brand of the faucets ? [SEP]
 [CLS] hi , would you please tell me what is the brand of the faucets ? thanks in advance . i love this kitchen . [SEP]
-hi , would you please tell me what is the brand of the faucets ? thanks in advance . thanks in advance . thanks in advance . thanks in advance . thanks in advance . thanks in advance . thanks in advance . thanks in advance . thanks 
+i love the manufacturer ? [SEP] 
 
 [CLS] what is the backsplash tile ? [SEP]
 [CLS] backsplash please ? ! what is the backsplash tile ? i love it ! ! [SEP]
-backsplash please ? ! what is the backsplash tile ? ! what is the backsplash tile ? ! what is the backsplash tile ? ! what is the backsplash tile ? ! what is the backsplash tile ? ! what is the backsplash tile ? ! what is 
+what is the backsplash tile ? [SEP] 
 
 [CLS] would love information on the flooring ? [SEP]
 [CLS] gorgeous flooring ! would love information on the flooring ? thanks . [SEP]
-gorgeous flooring ! would love information on the flooring ? thanks . [SEP] 
+what brand is it ? [SEP] 
 
 [CLS] could you share the manufacturer and name of the island pendant lights ? [SEP]
 [CLS] hi . could you share the manufacturer and name of the island pendant lights ? thanks so much ! [SEP]
-hi . could you share the manufacturer and name of the island pendant lights ? thanks so much ! [SEP] 
+love the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name 
 
 [CLS] what is the material of the counters ? [SEP]
 [CLS] i love the dark counters . they appear to black . what is the material ? [SEP]
-i love the dark counters . what is the material ? [SEP] 
+love the manufacturer ? [SEP] 
 
 [CLS] where did you get the chevron tiles ? [SEP]
 [CLS] the design is beautiful , could you please let me know where did you get the chevron tiles . thanks . [SEP]
-the design is beautiful , could you please let me know where did you get the chevron tiles . thanks . [SEP] 
+where did you get the light fixture ? [SEP] 
 
 [CLS] what make and color is the countertop ? [SEP]
 [CLS] what make and color is the countertop ? beautiful space . [SEP]
-what make and color is the countertop ? beautiful space . what material and color is the countertop ? beautiful space . what material and color is the countertop ? beautiful space . what material and color is the countertop ? beautiful space . what material and color 
+what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the 
 
 [CLS] do you have a source for the windows ? [SEP]
 [CLS] interested in the windows . great idea ! do you have a source for these ? [SEP]
-interested in the windows . great idea ! do you have a source for these ? [SEP] 
+love the source for the cabinets ? [SEP] 
 
 [CLS] are these penny rounds from an sacks ? [SEP]
 [CLS] are these penny rounds from an sacks ? they are gorgeous . [SEP]
-are these penny rounds from an sacks ? they are gorgeous . [SEP] 
+where are the light fixture from ? [SEP] 
 
 [CLS] what is the cabinet dimensions pleas ? [SEP]
 [CLS] what is the cabinet dimensions pleas ? thank you for your prompt replies [SEP]
-what is the cabinet dimensions pleas ? thank you for your prompt replies [SEP] 
+what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the flooring . what is the 
 
 [CLS] where you purchased the pendant lights ? [SEP]
 [CLS] will you please let me know where you purchased the pendant lights ? thank you . [SEP]
-will you please let me know where you purchased the pendant lights ? thank you . [SEP] 
+where did you get the pendant lights . [SEP] 
 
 [CLS] where to find the post columns on the end of the island and near sink ? [SEP]
 [CLS] love . hi , can you please tell me where to find the post columns on the end of the island and near sink ? thank you ! [SEP]
-love the end of the island and near sink ? thank you ! [SEP] 
+love the end of the end of the end of the end of the end of the end of the end of the end of the end of the end of the end of the end of the end of the end of the end of the end 
 
 [CLS] what is the paint color of the cabinets ? [SEP]
 [CLS] very pretty ! what is the paint color of the cabinets ? thank you ! [SEP]
-very pretty ! what is the paint color of the cabinets ? thank you ! [SEP] 
+love the color of the cabinets ? [SEP] 
 
 [CLS] can you tell me about the pendants and faucet ? [SEP]
 [CLS] can you tell me about the pendants and faucet ? beautiful clean lines . [SEP]
-can you tell me about the pendants and faucet ? beautiful clean lines . [SEP] 
+can you tell me the cabinet hardware ? [SEP] 
 
 [CLS] who made the wooden table in this picture . what style would this table be classified as . where might i be able to purchase such a table ? [SEP]
 [CLS] i d like to know who made the wooden table in this picture . what style would this table be classified as . where might i be able to purchase such a table ? thanks [SEP]
-i d like to know who made the wooden table in this picture . what style would this table be classified as . where might i be able to purchase such a table ? thanks [SEP] 
+i be able to purchase such a table style . who made it be classified as this picture . who made it be classified as this picture . who made it be classified as this picture . who made it be classified as this picture . who made 
 
 [CLS] where you got the table and the brand or name of the table ? [SEP]
 [CLS] love the table . it works look perfect in our breakfast nook also . would you mind sharing where you got it and the brand or name of the table ? [SEP]
-love the table . it works look perfect in our breakfast nook also . would you mind sharing where you got it and the brand or name of the table ? [SEP] 
+hi there . [SEP] 
 
 [CLS] what shade of white selected for the cabinets ? [SEP]
 [CLS] can you please share what shade of white selected for the cabinets . it s perfect with the soapstone and walnut ! [SEP]
-can you please share what shade of white selected for the cabinets . it s perfect with the soapstone and walnut ! [SEP] 
+love the color of the cabinets ? thank you ! [SEP] 
 
 [CLS] what is the distance between the edge of the island and the edge of the window seat ? [SEP]
 [CLS] love your kitchen ! could you please tell me the distance between the edge of the island and the edge of the window seat ? thank you ! [SEP]
-love your kitchen ! could you please tell me the distance between the edge of the window seat ? thank you ! [SEP] 
+love the island and the edge of the distance between the edge of the distance between the edge of the distance between the edge of the distance between the edge of the distance between the edge of the distance between the edge of the distance between the edge 
 
 [CLS] can you share banquette and window height ? [SEP]
 [CLS] beautiful . can you share banquette and window height ? thank you [SEP]
-beautiful . can you share banquette and window height ? thank you [SEP] 
+love this house ! [SEP] 
 
 [CLS] where could i get the table ? [SEP]
 [CLS] what a beautiful table ! is it custom ? where could i get one ? thanks ! [SEP]
-what a beautiful table ! is it ? where could i get one ? thanks ! [SEP] 
+where can i get the banquet table ? [SEP] 
 
 [CLS] where can i get this screen door ? [SEP]
 [CLS] where can i get this screen door ? i love your vibrant interiors ! [SEP]
-where can i get this screen door ? i love your vibrant interiors ! [SEP] 
+where can i find it ! [SEP] 
 
 [CLS] where are the white upper cabinets from ? [SEP]
 [CLS] where are the white upper cabinets from ? love them ! [SEP]
-where are the white upper cabinets from ? love them ! [SEP] 
+where did you get the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over 
 
 [CLS] are the lighting plug in or are they installed through the bottoms of the upper cabinets ? [SEP]
 [CLS] i am not sold on rope lighting for now . i like these lights better . are they plug in or are they installed through the bottoms of the upper cabinets ? thank you . love the color of the wall area . thank you . holly [SEP]
-i am not sold on rope lighting for now . i like these lights better . are they plug in or are they installed through the bottoms of the upper cabinets ? thank you . holly [SEP] 
+i am not sold on rope lighting for now . i m trying to replicate this kitchen ! [SEP] 
 
 [CLS] where is the refrigerator ? [SEP]
 [CLS] your beautiful kitchen ! i love everything about this except i do not see a refrigerator . where is it ? [SEP]
-your beautiful kitchen ! i love everything about this except i do not see a refrigerator . where is it ? [SEP] 
+where to get it ? [SEP] 
 
 [CLS] where can i get this light fixture ? [SEP]
 [CLS] where can i get this light fixture ? please provide details regarding light fixture . love it ! [SEP]
-where can i get this light fixture ? love this light fixture ? love this light fixture ? love this light fixture ? love this light fixture ? love this light fixture ? love this light fixture ? love this light fixture ? love this light fixture ? 
+where can i find it ? thank you please tell me where i love them ? [SEP] 
 
 [CLS] where can i purchase the the tufted back and cushion ? [SEP]
 [CLS] love the tufted back and cushion . where can i purchase this ? [SEP]
-love the tufted back and cushion . where can i purchase this ? [SEP] 
+i love it ? thanks [SEP] 
 
 [CLS] where can i find the rug ? [SEP]
 [CLS] like the rug ! . the rug is just what i am looking for in our dining room . goes well with our coastal colors . where can i find it ? love they way everything goes together in this kitchen . [SEP]
-like the rug is just what i am looking for in our dining room . goes well with our coastal colors . where can i find it ? [SEP] 
+where can i find it ? many thanks [SEP] 
 
 [CLS] where can i purchase the backsplash tile ? [SEP]
 [CLS] where can i purchase the backsplash tile ? love the colour of the tile ! [SEP]
-where can i purchase the tile ! [SEP] 
+i love it ? [SEP] 
 
 [CLS] what is the name of that table style or can i but it ? [SEP]
 [CLS] wow ! love this setup . what is the name of that table style or better yet where can i buy it ! ? cheers ! [SEP]
-wow ! love this setup . what is the name of an overhang be style name of an overhang be style name of an overhang be style name of an overhang be style name of an overhang be style name of an overhang be style name of an 
+i d like to know who is the manufacturer ? thanks in advance . [SEP] 
 
 [CLS] what is the name of the light feature ? [SEP]
 [CLS] what is the name of the light feature , it s gorgeous ! [SEP]
-what is the name of the light feature , it s gorgeous ! [SEP] 
+love the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what 
 
 [CLS] where you got the textural and the name ? [SEP]
 [CLS] great textural detail . could you please tell me where you got it and the name ? [SEP]
-great textural detail . could you got it and the name ? [SEP] 
+love the table and where to find the manufacturer ? [SEP] 
 
 [CLS] where to find the rug ? [SEP]
 [CLS] love the rug . can you tell me where to find it ? [SEP]
-love the rug . can you tell me where to find it ? [SEP] 
+love this kitchen ! [SEP] 
 
 [CLS] what kind of hardwoods did you use ? [SEP]
 [CLS] what kind of hardwoods did you use ? i love the color [SEP]
-what kind of hardwoods did you use ? i love the color [SEP] 
+what kind of hardwoods did you use ? [SEP] 
 
 [CLS] would it be possible to get a photo of the basic floor plan of this level of the home ? [SEP]
 [CLS] would it be possible to get a photo of the basic floor plan of this level of the home ? we absolutely love everything about this kitchen and great room ! [SEP]
-would it be possible to get a photo of the home ? we absolutely love everything about this kitchen and great room ! [SEP] 
+hi there . might i be possible to purchase the basic floor plan of the basic floor plan of the basic floor plan of the basic floor plan of the basic floor plan of the basic floor plan of the basic floor plan of the basic floor plan 
 
 [CLS] where can i get the banquet table ? [SEP]
 [CLS] where can i get the banquet table ? . it s exactly what we re looking for . if its custom , please share the designer . thanks ! [SEP]
-where can i get one ? thanks ! [SEP] 
+where can i get the banquet table ? [SEP] 
 
 [CLS] can you please tell me the color of the cabinets ? [SEP]
 [CLS] love this cabinet color . can you please tell me the color of the cabinets ? [SEP]
-love this cabinet color . can you please tell me the color of the cabinets ? [SEP] 
+love the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color 
 
 [CLS] what company built the booth ? [SEP]
 [CLS] what company built the booth ? is it leather ? thanks . it is a beautiful kitchen ! ! ! ! ! [SEP]
-what company built the booth ? is it leather ? thanks ! [SEP] 
+what company built the booth ? [SEP] 
 
 [CLS] what are the perimeter countertops ? [SEP]
 [CLS] what are the perimeter countertops ? . the perimeter countertop material is gorgeous and looks like marble . i d like to have the name of it please . [SEP]
-what are the perimeter countertops ? . the perimeter countertop material is gorgeous and looks like marble . i d like to have the name of it please . [SEP] 
+what is the floor ? [SEP] 
 
 [CLS] where that pendant is from ? [SEP]
 [CLS] can you please tell me where that pendant is from ? ? love it ! [SEP]
-can you please tell me where that pendant is from ? ? love it ! [SEP] 
+where can i find it ! [SEP] 
 
 [CLS] where the counter stools are from ? [SEP]
 [CLS] love these counter stools , could you share where they are from ? [SEP]
-love these counter stools , could you share where they are from ? [SEP] 
+where are the light fixture from ? [SEP] 
 
 [CLS] what is the white used on the cabinets ? [SEP]
 [CLS] this is beautiful what is the white used on the cabinets ? [SEP]
-this is beautiful what is the white used on the cabinets ? [SEP] 
+what is the cabinets ? [SEP] 
 
 [CLS] what the floor is ? [SEP]
 [CLS] can you share what the floor is ? beautiful ! [SEP]
-can you share what the floor is ? [SEP] 
+what is the counter open ? [SEP] 
 
 [CLS] what sink is this ? [SEP]
 [CLS] what sink is this ? it s beautiful with the countertops . [SEP]
-what sink is this ? it s beautiful with the countertops . [SEP] 
+what is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of this is the counter made of 
 
 [CLS] can you tell me the color of the paint ? [SEP]
 [CLS] i really like the beautiful green paint . can you tell me the color ? [SEP]
-i really like the beautiful green paint . can you tell me the color ? [SEP] 
+love the color of the cabinets ? [SEP] 
 
 [CLS] if this wood is quarter or rift sawn oak ? [SEP]
 [CLS] lovely kitchen ! can you tell me if this wood is quarter or rift sawn oak ? thank you for sharing ! [SEP]
-lovely kitchen ! can you tell me if this wood is quarter or rift sawn oak ? thank you for sharing ! [SEP] 
+i love this is the counter stools are they are they are they are they are they are they are they are they are they are they are they are they are they are they are they are they are they are they are they are they are 
 
 [CLS] what is the source of the pendent lights ? [SEP]
 [CLS] love the pendent lights ! what is the source ? please tell us the source of the pendent lights . thanks you . [SEP]
-love the pendent lights ? thanks ! [SEP] 
+love the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what 
 
 [CLS] what material the sink is and who is the manufacturer ? [SEP]
 [CLS] can you please tell me what material the sink is and who is the manufacturer ? thanks ! [SEP]
-can you please tell me what material the sink is and who is the manufacturer ? thanks ! [SEP] 
+i love the manufacturer ? [SEP] 
 
 [CLS] who makes this faucet ? [SEP]
 [CLS] could you please tell me who makes this faucet ? thank you ! [SEP]
-could you please tell me who makes this faucet ? thank you ! [SEP] 
+hi , lovely floor ? [SEP] 
 
 [CLS] who is the manufacture of the backsplash tile ? [SEP]
 [CLS] can i ask who is the manufacture of the backsplash tile ? thanks [SEP]
-can i ask who is the manufacture of the backsplash tile ? thanks [SEP] 
+i love the backsplash tile ? thanks [SEP] 
 
 [CLS] where can i find the pendant lighting ? [SEP]
 [CLS] pendant lighting is beautiful , where can i find them ? [SEP]
-pendant lighting is beautiful , where can i find them ? [SEP] 
+where can i find it ? thank you please tell me where i love them ? [SEP] 
 
 [CLS] is the hood made of wood ? [SEP]
 [CLS] love the hood . is it made of wood ? ? [SEP]
-love the hood . is it made of wood ? ? [SEP] 
+what brand is it ? [SEP] 
 
 [CLS] can you tell me more about the art and where to find ? [SEP]
 [CLS] love the art ! can you tell me more about and where to find ? thanks ! [SEP]
-love the art ! can you tell me more about and where to find ? thanks ! [SEP] 
+hi there any ordering information about the art ! can you tell me where to find ? thanks ! [SEP] 
 
 [CLS] how to attach the backrest to the wall ? [SEP]
 [CLS] do you mind sharing how to attach the backrest to the wall ? thanks [SEP]
-do you mind sharing how to attach the backrest to the wall ? thanks [SEP] 
+i would love to know the name of the manufacturer ? [SEP] 
 
 [CLS] where is the faux leather from ? [SEP]
 [CLS] where is the faux leather from ? i love it ! thank you for taking the time to answer my question ! [SEP]
-where is the faux leather from ? i love it ! thank you for taking the time to answer my question ! [SEP] 
+where did the dish towels come from ? i love them ! [SEP] 
 
 [CLS] do you know who made table ? [SEP]
 [CLS] love this table . do you know who made it ? [SEP]
-love this table . do you know who made it ? [SEP] 
+this faucet ? thank you ! [SEP] 
 
 [CLS] can you share the size of the cabinet hardware ? [SEP]
 [CLS] beautiful kitchen and cabinets ! can you share the size of the cabinet hardware ? [SEP]
-beautiful kitchen and cabinets ! can you share the size of the cabinet hardware ? [SEP] 
+can you share the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for the source for 
 
 [CLS] what paint colors did you use in the dining room and kitchen ? [SEP]
 [CLS] love the paint colors ! what paint colors did you use in the dining room and kitchen ? [SEP]
-love the paint colors ! what paint colors did you use in the dining room and kitchen ? [SEP] 
+the white you used in the paint colors did you use in the paint colors ! what are the paint colors ! what are the paint colors ! what are the paint colors ! what are the paint colors ! what are the paint colors ! what are 
 
 [CLS] how much space is between the two islands ? [SEP]
 [CLS] hello . beautiful kitchen ! could you please tell me how much space is between the two islands or generally speaking , how much you d recommend ? [SEP]
-hello . could you please tell me how much space is between the two islands or generally speaking , how much you d recommend ? [SEP] 
+hello , how much space . help , help . thank you for taking the dish towels come from ? i just love the leaded glass or generally speaking , how much space . help , help . thank you for taking the dish towels come from ? 
 
 [CLS] where the shade came from ? [SEP]
 [CLS] we love the roman shade . can you tell us where they came from ? btw . this is one beautiful kitchen . [SEP]
-we love the roman shade . can you tell us where they came from ? btw . can you tell us where they came from ? btw . can you tell us where they came from ? btw . can you tell us where they came from ? 
+where are the light fixture from ? [SEP] 
 
 [CLS] who makes the cabinet pulls ? [SEP]
 [CLS] hi , lovely kitchen . can you tell me who makes the cabinet pulls ? [SEP]
-hi , lovely kitchen . can you tell me who makes the cabinet pulls ? [SEP] 
+love the wallpaper ! ! [SEP] 
 
 [CLS] who is the manufacturer of the island pendants ? [SEP]
 [CLS] love the island pendants ! who is the manufacturer ? [SEP]
-love the island pendants ! who is the manufacturer ? [SEP] 
+i love the island pendants ! [SEP] 
 
 [CLS] what kind of paint is used to get the natural light brown color ? [SEP]
 [CLS] i alsooo loveee the combination of the white and natural wood color on the cabinet . could you also please tell me what kind of paint is used to get the natural light brown color ? [SEP]
-i alsooo loveee the combination of the white and natural wood color on the cabinet . could you also please tell me what kind of paint is used to get the natural light brown color ? [SEP] 
+love the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color of the color 
 
 [CLS] could you please tell me the about the floor [SEP]
 [CLS] could you please tell me the about the floor ! i love the color ! thanks ! [SEP]
-could you please tell me the about the floor ! i love the color ! could you please tell me the about the floor ! i love the color ! could you please tell me the about the floor ! i love the color ! could you please 
+can you please tell me the cabinets ? [SEP] 
 
 [CLS] did you use the same on the walls and the trim all through the house ? [SEP]
 [CLS] the white you used throughout the house is so clean and crisp . did you use the same on the walls and the trim all through the house ? thanks ! [SEP]
-the house ? thanks ! [SEP] 
+love the white used throughout the house is used in the white used throughout the house is used in the white used throughout the house is used in the white used throughout the house is used in the white used throughout the house is used in the white 
 
 [CLS] can you tell us the kind of subway tile you used ? [SEP]
 [CLS] beautiful kitchen ! can you tell us the kind of subway tile you used ? thanks ! [SEP]
-beautiful kitchen ! can you tell us the kind of subway tile you used ? thanks ! [SEP] 
+love the color of the cabinets ? [SEP] 
 
 [CLS] would you share the brand and color of the tile , and the grout color used ? [SEP]
 [CLS] beautiful job with tile and grout . would you be kind enough to share the brand and color of the tile , and the grout color used ? it appear they are glossy , correct ? many thanks [SEP]
-beautiful job with tile and grout . would you be kind enough to share the brand and color of the tile , and the grout color used ? it appear they are glossy , correct ? many thanks [SEP] 
+love the kind of tile and grout color used ? [SEP] 
 
 [CLS] do you have details on the lights over the island ? [SEP]
 [CLS] love the pendant lights . do you have details on the lights over the island ? [SEP]
-love the pendant lights . do you have details on the island ? [SEP] 
+the lights over the island ? [SEP] 
 
 [CLS] what are the dimensions of the room ? [SEP]
 [CLS] love this pantry . it s my dream pantry . what are the dimensions of the room ? thank you . [SEP]
-love this pantry . [SEP] 
+love the pendent lights . what is the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions 
 
 [CLS] could you please tell me the dimensions ? [SEP]
 [CLS] hi , love this butlers pantry . could you please tell me the dimensions ? [SEP]
-hi , love this butlers pantry . could you please tell me the dimensions ? [SEP] 
+love the tiles used ? [SEP] 
 
 [CLS] what the greenish cabinet color is ? [SEP]
 [CLS] please let us know what the greenish cabinet color is , thanks ! [SEP]
-please let us know what the greenish cabinet color is , thanks ! [SEP] 
+what is the flooring ? [SEP] 
 
 [CLS] is the grey tile glass or ceramic ? [SEP]
 [CLS] can you at least answer this . is the grey tile glass or ceramic ? [SEP]
-can you at least answer this . is the grey tile glass or ceramic ? [SEP] 
+what company built the booth ? [SEP] 
 
 [CLS] where are the hanging lights from ? [SEP]
 [CLS] where are the hanging lights from ? the question was asked over a month ago but i see no reply to date . thank you ! i really want these in my new kitchen ! ! [SEP]
-where are the hanging lights from ? the question was asked over a month ago but i see no reply to date . thank you ! i really want these in my new kitchen ! ! [SEP] 
+where did the dish towels come from ? [SEP] 
 
 [CLS] please share the brand and color used . [SEP]
 [CLS] love these windows ! please share the brand and color used in this fantastic home . [SEP]
-love these windows ! [SEP] 
+love the brand and color used ? [SEP] 
 
 [CLS] what the species and the stain is ? [SEP]
 [CLS] the cabinets are beautiful . please tell me what the species and the stain is ? [SEP]
-the cabinets are beautiful . please tell me what the species and the stain is ? [SEP] 
+love the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name 
 
 [CLS] where did you get the lamp pendants ? [SEP]
 [CLS] where did you get the lamp pendants ? love them with the soft colors [SEP]
-where did you get the soft colors [SEP] 
+where did you get the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over the light fixture over 
 
 [CLS] where you got the stools ? [SEP]
 [CLS] those stools are amazing . can you tell me where you got them ? [SEP]
-those stools are amazing . can you tell me where you got them ? [SEP] 
+love the rug ! [SEP] 
 
 [CLS] what is the size of this island ? [SEP]
 [CLS] very beautiful ! what is the size of this island please ? [SEP]
-very beautiful ! what is the size of this island please ? [SEP] 
+what is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the 
 
 [CLS] what are the dimensions of this peninsula ? [SEP]
 [CLS] what are the dimensions of this peninsula ? thanks . love the whole look of these rooms . [SEP]
-what are the dimensions of this peninsula ? thanks ! [SEP] 
+what is the dimensions of the flooring . what is the counter top material and color of the dimensions of the flooring . what is the counter top material and color of the dimensions of the flooring . what is the counter top material and color of the 
 
 [CLS] what wood is used in all parts of the flooring ? [SEP]
 [CLS] love the herringbone design . what wood is used in all parts of the flooring , it looks like a darker wood aroun . [SEP]
-love the herringbone design . what wood is used in all parts of the flooring , it looks like a darker wood aroun . [SEP] 
+what brick was used in all parts of the flooring , what brick was used in all parts of the flooring , what brick was used in all parts of the flooring , what brick was used in all parts of the flooring , what brick was used 
 
 [CLS] where you get the hood ? [SEP]
 [CLS] the hood is so amazing ! could please tell me where you get it ? thanks [SEP]
-the hood is so amazing ! could you get it ? thanks [SEP] 
+love the rug ! [SEP] 
 
 [CLS] what kind of wood is the flooring ? [SEP]
 [CLS] love the flooring . what kind of wood is this ? thanks [SEP]
-love the flooring . what kind of wood is this ? thanks [SEP] 
+what is the cabinets ? [SEP] 
 
 [CLS] what model is the light ? [SEP]
 [CLS] wow ! i love this supended light over the kitchen , what model is it ? [SEP]
-wow ! i love this supended light over the kitchen , what model is it ? [SEP] 
+what is the flooring ? [SEP] 
 
 [CLS] would you know the name brand that was used ? [SEP]
 [CLS] i love the white color that is used . would you know the name brand that was used ? [SEP]
-i love the white color that is used . would you know the name brand that was used ? [SEP] 
+love the brand and color used ? [SEP] 
 
 [CLS] are these paint grade wood cabinets ? [SEP]
 [CLS] are these paint grade wood cabinets ? i love the sleek , smooth look . [SEP]
-are these paint grade wood cabinets ? i love the sleek , smooth look . [SEP] 
+are the fireplace [SEP] 
 
 [CLS] where did you get the backsplash ? [SEP]
 [CLS] i love that backsplash behind the counter , where did you get it ? [SEP]
-i love that backsplash behind the counter , where did you get it ? [SEP] 
+where did you get the light fixture ? [SEP] 
 
 [CLS] where to purchase the sconces at the windows ? [SEP]
 [CLS] could you please tell me where to purchase the sconces at the windows ? thanks ! [SEP]
-could you please tell me where to purchase the sconces at the windows ? thanks ! [SEP] 
+i love the island ? [SEP] 
 
 [CLS] would you tell me the dimensions ? [SEP]
 [CLS] this is stunning ! would you tell me the dimensions ? [SEP]
-this is stunning ! would you tell me the dimensions ? [SEP] 
+can you please tell me the cabinet ? [SEP] 
 
 [CLS] might you know the kind of material and maker ? [SEP]
 [CLS] hi there . love the look of the wall tile . might you know the kind of material and maker ? [SEP]
-hi there . love the look of the wall tile . might you know the kind of material and maker ? [SEP] 
+love the brand and color used ? [SEP] 
 
 [CLS] can you tell me the stain on the island ? [SEP]
 [CLS] can you tell me the stain on the island ? this looks like a gray color with maybe a glaze . thank you . it look fabulous ! [SEP]
-can you tell me the stain on the island ? this looks like a gray color with maybe a glaze . thank you . it look fabulous ! [SEP] 
+can you tell me the source ? [SEP] 
 
 [CLS] is this your crestwood series line ? [SEP]
 [CLS] beautiful kitchen . is this your crestwood series line ? [SEP]
-beautiful kitchen . is this your crestwood series line ? [SEP] 
+i love this is the counter stools . [SEP] 
 
 [CLS] what kind of wood is the dark cabinet ? [SEP]
 [CLS] what kind of wood is the cabinet ? would love it for my kitchen . [SEP]
-what kind of wood is the cabinet ? [SEP] 
+what is the countertops ? [SEP] 
 
 [CLS] what dark stain color did you use on the knotty alder ? [SEP]
 [CLS] what dark stain color did you use on the knotty alder ? it is a such a nice color ! thanks [SEP]
-what dark stain color did you use on the knotty alder ? it is a such a nice color ! thanks [SEP] 
+what kind of wood is used ? [SEP] 
 
 [CLS] where to get the counter stools ? [SEP]
 [CLS] i love these kitchen counter stools . can you share where to get them ? [SEP]
-i love these kitchen counter stools . can you share where to get them ? [SEP] 
+where can you tell me where are they from ? [SEP] 
 
 [CLS] where is that tile available at ? [SEP]
 [CLS] love the blue wall tile . where is that tile available at ? [SEP]
-love the blue wall tile . where is that tile available at ? [SEP] 
+where can you tell me where is beautiful . where can you tell me where is beautiful . where can you tell me where is beautiful . where can you tell me where is beautiful . where can you tell me where is beautiful . where can you 
 
 [CLS] are the countertops blue granite ? [SEP]
 [CLS] are the countertops blue granite ? love the countertops . would like to know the material and color . [SEP]
-are the countertops blue granite ? love the countertops blue granite ? love the countertops blue granite ? love the countertops blue granite ? love the countertops blue granite ? love the countertops blue granite ? love the countertops blue granite ? love the countertops blue granite ? 
+what is the countertops blue granite ? [SEP] 
 
 [CLS] what are the measurements of this cabinet ? [SEP]
 [CLS] dimensions please ! ! ! what are the measurements of this cabinet ? thank you [SEP]
-dimensions please ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! 
+what is the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the 
 
 [CLS] what are the counters and backsplash ? [SEP]
 [CLS] what are the counters and backsplash ? love everything about this ! [SEP]
-what are the counters and backsplash ? love everything about this ! [SEP] 
+what is the wall ? thanks ! [SEP] 
 
 [CLS] what color is the cabinets ? [SEP]
 [CLS] i love the paint color of the cabinets . what color is it ? [SEP]
-i love the paint color of the cabinets . what color is it ? [SEP] 
+what color is it is the cabinets ? [SEP] 
 
 [CLS] where are the light fixtures from ? [SEP]
 [CLS] i love those light fixtures . where are they from ? [SEP]
-i love those light fixtures . where are they from ? [SEP] 
+where are the light fixture from ? [SEP] 
 
 [CLS] what color did you use for the top cabinets and finishes ? [SEP]
 [CLS] hello what color did you use for the top cabinets and finishes ? thank you [SEP]
-hello what color did you use for the top cabinets and finishes ? thank you [SEP] 
+love the cabinets ? thank you used throughout the house is used for the white selected for the white selected for the white selected for the white selected for the white selected for the white selected for the white selected for the white selected for the white selected 
 
 [CLS] which finish did you use on the cabinets ? [SEP]
 [CLS] you did an exceptional job ! ! which finish did you use on the cabinets ? warm regards [SEP]
-you did an exceptional job ! ! which finish did you use on the cabinets ? warm regards [SEP] 
+love the cabinet color did you use on the cabinets ? [SEP] 
 
 [CLS] what is the color of the tile ? [SEP]
 [CLS] love the backsplash . what is the color of the tile ? [SEP]
-love the backsplash tile ? [SEP] 
+what is the backsplash tile is the cabinets ? [SEP] 
 
 [CLS] where did the barstools come from ? [SEP]
 [CLS] i love this kitchen ! where did the barstools come from ? i love them ! [SEP]
-i love this kitchen ! where did the barstools come from ? i love them ! where did the barstools come from ? i love them ! where did the barstools come from ? i love them ! where did the barstools come from ? i love them 
+where did the dish towels come from ? [SEP] 
 
 Eval
 
 [CLS] are the cabinets an off white color or true white ? [SEP]
 [CLS] beautiful kitchen ! i know they are custom cabinets , but are they an off white color or true white ? [SEP]
-love the color of the cabinets ? thank you . thank you . thank you . thank you . thank you . thank you . thank you . thank you . thank you . thank you . thank you . thank you . thank you . thank you 
+i love the island and the white upper cabinets ? thank you ! [SEP] 
 
 [CLS] where can i get the island and dining room light fixtures ? [SEP]
 [CLS] i love the island and dining room light fixtures , where can i get them ? [SEP]
-love the table and where or something similar ? [SEP] 
+i love the island . where can i purchase the island ? [SEP] 
 
 [CLS] who is the manufacturer of the floors ? [SEP]
 [CLS] the floors are exactly what we want ! who is the manufacturer ? [SEP]
-love the island ? who is the manufacturer ? [SEP] 
+i love the island ? [SEP] 
 
 [CLS] can you share the name of the paint ? [SEP]
 [CLS] love the wall color . can you please share the name of the paint ? [SEP]
-very beautiful ! [SEP] 
+can you share the source ? [SEP] 
 
 [CLS] what kind of window blinds these are ? [SEP]
 [CLS] could you tell me what kind of window blinds these are ? love the idea ! ! ! [SEP]
-what kind of wood is it ? [SEP] 
+what is the cabinet color of the cabinets ? [SEP] 
 
 [CLS] where is the cabinet hardware from ? [SEP]
 [CLS] where is the cabinet hardware from ? love the finish ! beautiful work ! [SEP]
-where is the faux leather from ? thank you for taking the white upper cabinets from ? thank you for taking the white upper cabinets from ? thank you for taking the white upper cabinets from ? thank you for taking the white upper cabinets from ? thank 
+where are the light fixture from ? [SEP] 
 
 [CLS] how large a space this kitchen fit into ? [SEP]
 [CLS] i m wondering how large a space this kitchen fit into ? [SEP]
-love the table ? [SEP] 
+i love the table ? [SEP] 
 
 [CLS] what the dimensions of this pantry are ? [SEP]
 [CLS] hello , i was wondering what the dimensions of this pantry are ? thank you ! [SEP]
-what the stain ? [SEP] 
+what is the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the dimensions of the 
 
 [CLS] where you got the flush mount light ? [SEP]
 [CLS] i like the flush mount light . can you tell me where you got it ? [SEP]
-hi , would you tell me where you got it ? [SEP] 
+love the rug . can you tell me where is it ? thanks ! [SEP] 
 
 [CLS] where can i get the counter stools ? [SEP]
 [CLS] love the counter stools . where can i get them ? [SEP]
-where can i get them . where can i get them . where can i get them . where can i get them . where can i get them . where can i get them . where can i get them . where can i get them . 
+where can i find it ! [SEP] 
 
 [CLS] what material and color are the countertops ? [SEP]
 [CLS] what material and color are the countertops ? they look great . [SEP]
-love the countertops ? thanks . [SEP] 
+what color is it ? [SEP] 
 
 [CLS] where was the bar cart purchased ? [SEP]
 [CLS] love the bar cart ! ! ! where was it purchased ? thank you . [SEP]
-where was the counter stools . [SEP] 
+where can i find it ! [SEP] 
 
 [CLS] what is the material and color ? [SEP]
 [CLS] love the counters ! what is the material and color ? thank you ! [SEP]
-love the counters . what is the color ? [SEP] 
+what brand and color ? [SEP] 
 
 [CLS] where the bar stools are from ? [SEP]
 [CLS] what a great kitchen . can you share where the bar stools are from ? [SEP]
-love these counter stools , could you share where they are from ? [SEP] 
+where can i find the hanging lights . where can i find the hanging lights . where can i find the hanging lights . where can i find the hanging lights . where can i find the hanging lights . where can i find the hanging lights . 
 
 [CLS] what kind of countertop is that ? [SEP]
 [CLS] please tell me what kind of countertop is that ? love the veining ! [SEP]
-love the flooring . what kind of wood color is it ? [SEP] 
+what is the color ? [SEP] 
 
 [CLS] where is the wine fridge from ? [SEP]
 [CLS] love the wine fridge ! ! ! where is it from ? i absolutely love the built in wine fridge . thank you ! [SEP]
-where is the faux leather from ? [SEP] 
+where can i get them ? [SEP] 
 
 [CLS] where may i find these cabinets ? [SEP]
 [CLS] beautiful ! where may i find these cabinets ? they go nicely with the craftsman windows of our house we have in the design stages . thank you . [SEP]
-hello , where can i find this hardware ? [SEP] 
+where can i find it ! [SEP] 
 
 [CLS] what is the style or name of the crown molding ? [SEP]
 [CLS] great kitchen ! lovely ! what is the style or name of the crown molding ? [SEP]
-what is the name of the kitchen ! what is the name of the kitchen ! what is the name of the kitchen ! what is the name of the kitchen ! what is the name of the kitchen ! what is the name of the kitchen ! 
+what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . what is the pendent lights . 
 
 [CLS] where to get the black pendant lights [SEP]
 [CLS] please tell me where to get the black pendant lights . thank you [SEP]
-can you share where you please tell me where you please tell me where you please tell me where you please tell me where you please tell me where you please tell me where you please tell me where you please tell me where you please tell me 
+i love the island ? [SEP] 
 
 [CLS] what is the back splash ? [SEP]
 [CLS] what is the back splash ? it is beautiful . i love the lighting choice . thank you ! [SEP]
-what is the counter top material is beautiful ! ! [SEP] 
+what is the counter open ? [SEP] 
 
 [CLS] what type of wood the cabinets are ? [SEP]
 [CLS] love this . i love this kitchen ! can you please tell me what type of wood the cabinets are ? [SEP]
-love the cabinets ? thanks in advance . love the cabinets ? thanks in advance . love the cabinets ? thanks in advance . love the cabinets ? thanks in advance . love the cabinets ? thanks in advance . love the cabinets ? thanks in advance . 
+what brick was used in all parts of the flooring , lovely space ! ! [SEP] 
 
 [CLS] what type of wood are they ? [SEP]
 [CLS] love the cabinets ! what type of wood are they ? love the kitchen , great work it s beautiful . [SEP]
-what type of wood ? [SEP] 
+are the fireplace [SEP] 
 
 [CLS] where could i purchase the stools ? [SEP]
 [CLS] where could i purchase the stools ? they are gorgeous . thank you . love everything ! [SEP]
-love them ? [SEP] 
+where can i find it ? thank you . can i find it ? thank you . can i find it ? thank you . can i find it ? thank you . can i find it ? thank you . can i find it ? thank you 
 
 [CLS] what is the cabinetry made of and what type of finish was used on them ? [SEP]
 [CLS] i am blown away by the beautiful touches and warmth of this kitchen . what is the cabinetry made of and what type of finish was used on them ? thanks . [SEP]
-love the counters . what is the counters . what is the counters . what is the counters . what is the counters . what is the counters . what is the counters . what is the counters . what is the counters . what is the counters 
+what kind of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of the brand of 
 
 [CLS] where they purchased the back splash ? [SEP]
 [CLS] beautiful kitchen ! can you tell me where they purchased the back splash . thanks [SEP]
-where is the bell shaped lights from ? love them . [SEP] 
+where i love them ! [SEP] 
 
