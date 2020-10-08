@@ -12,12 +12,12 @@ import time
 ##   config  ##
 root = "./"
 
-exp_name = "res50_gen_token"
+exp_name = "res50_gen_token_2"
 
-# cate = "auto_annot"
-cate = "human_annot"
-# with_visual = False
-with_visual = True
+cate = "auto_annot"
+# cate = "human_annot"
+with_visual = False
+# with_visual = True
 
 # extract_feature = False
 extract_feature = True
@@ -260,7 +260,7 @@ def eval(input_dataset, data_size, return_result=False):
 #### training ##
 
 print("Begin training")
-EPOCHS = 100
+EPOCHS = 30
 eval_loss = 100.0
 
 for epoch in range(EPOCHS):
@@ -274,7 +274,7 @@ for epoch in range(EPOCHS):
     batch_loss = train_step(ids, targ, img)
     total_loss += batch_loss
 
-    if batch % 5 == 0:
+    if batch % 10 == 0:
       print('Epoch {} Batch {} Loss {:.4f}'.format(epoch + 1,
                                                    batch,
                                                    batch_loss.numpy()))
