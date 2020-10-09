@@ -41,7 +41,9 @@ if encoder_bidirection:
 else:
     exp_name += "_no_encoder_bidirect"
 
-
+# [1-2, 1-2]
+GRU_layers = [2, 2]
+exp_name += "_GRU_layers_enc" + GRU_layers[0] + "_dec" + GRU_layers[1]
 
 #################
 ###  data read ##
@@ -271,7 +273,7 @@ def eval(input_dataset, data_size, return_result=False):
 #### training ##
 
 print("Begin training")
-EPOCHS = 30
+EPOCHS = 50
 eval_loss = 100.0
 
 for epoch in range(EPOCHS):

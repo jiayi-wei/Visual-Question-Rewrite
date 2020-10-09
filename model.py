@@ -131,6 +131,8 @@ class GenEncoder(tf.keras.Model):
     self.enc_units = enc_units
 
     self.enc_embedding = embedding
+    
+    self.bidirection = bidirection
     if bidirection:
         self.gru = tf.keras.layers.Bidirectional(tf.keras.layers.GRU(
             enc_units, return_state=True, return_sequences=True, recurrent_initializer='glorot_uniform'))
@@ -144,13 +146,18 @@ class GenEncoder(tf.keras.Model):
       # x   batch*len*256
       # print(x.shape)
       # print(self.initialize_hidden_state(x.shape[0]).shape)
-      output, state = self.gru(x, self.initialize_hidden_state(x.shape[0]))
+      if self.bidirection:
+          output, state, backward_state = self.gru(x, self.initialize_hidden_state(x.shape[0]))
+      else:
+          output, state = self.gru(x, self.initialize_hidden_state(x.shape[0]))
       # output   batch*len*unit
       # state    batch*unit
       return output, state
 
   def initialize_hidden_state(self, batch_sz):
-    return tf.zeros((batch_sz, self.enc_units))
+      if self.bidirection:
+          return [tf.zeros((batch_sz, self.enc_units)) for i in range(2)]
+      return tf.zeros((batch_sz, self.enc_units))
 
 
 
