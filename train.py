@@ -33,6 +33,16 @@ exp_name += cate
 img_model_name = 'res50'
 fc_top = False
 
+########################
+###  RNN part config ###
+encoder_bidirection = True
+if encoder_bidirection:
+    exp_name += "_encoder_bidirect"
+else:
+    exp_name += "_no_encoder_bidirect"
+
+
+
 #################
 ###  data read ##
 
@@ -128,7 +138,8 @@ decoder = model.QRewriteModel(vocab_tar_size,
                               with_visual=with_visual)
 # encoder = model.bert_encoder(input_max_length)
 encoder = model.GenEncoder(embedding_layer,
-                           units)
+                           units,
+                           encoder_bidirection)
 
 optimizer = tf.keras.optimizers.Adam()
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True,

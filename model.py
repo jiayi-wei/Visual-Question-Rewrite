@@ -124,16 +124,19 @@ class GenEncoder(tf.keras.Model):
   	           # vocab_inp_size,
   	           # embedding_dim,
                embedding,
-  	       enc_units):
+  	           enc_units,
+               bidirection=False):
     super(GenEncoder, self).__init__()
     #self.enc_embedding = tf.keras.layers.Embedding(vocab_inp_size, embedding_dim)
     self.enc_units = enc_units
 
     self.enc_embedding = embedding
-    self.gru = tf.keras.layers.GRU(enc_units,
-                                   return_state=True,
-                                   return_sequences=True,
-    	                           recurrent_initializer='glorot_uniform')
+    if bidirection:
+        self.gru = tf.keras.layers.Bidirectional(tf.keras.layers.GRU(
+            enc_units, return_state=True, return_sequences=True, recurrent_initializer='glorot_uniform'))
+    else:
+        self.gru = tf.keras.layers.GRU(
+          enc_units, return_state=True, return_sequences=True, recurrent_initializer='glorot_uniform')
 
   def call(self, x):
       # x   batch*len
