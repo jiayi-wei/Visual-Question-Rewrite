@@ -42,8 +42,8 @@ else:
     exp_name += "_no_encoder_bidirect"
 
 # [1-2, 1-2]
-GRU_layers = [2, 2]
-exp_name += "_GRU_layers_enc" + GRU_layers[0] + "_dec" + GRU_layers[1]
+GRU_layers = {"encoder": 2, "decoder": 2}
+exp_name += "_GRU_layers_enc" + GRU_layers["encoder"] + "_dec" + GRU_layers["decoder"]
 
 #################
 ###  data read ##
@@ -137,11 +137,13 @@ decoder = model.QRewriteModel(vocab_tar_size,
                               embedding_layer,
                               units,
                               batch_size,
-                              with_visual=with_visual)
+                              with_visual=with_visual,
+                              gru_layers=GRU_layers["decoder"])
 # encoder = model.bert_encoder(input_max_length)
 encoder = model.GenEncoder(embedding_layer,
                            units,
-                           encoder_bidirection)
+                           encoder_bidirection,
+                           gru_layers=GRU_layers["encoder"])
 
 optimizer = tf.keras.optimizers.Adam()
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True,

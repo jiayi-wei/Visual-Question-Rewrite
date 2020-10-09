@@ -55,7 +55,8 @@ class QRewriteModel(tf.keras.Model):
                embedding,
                dec_units,
                batch_size,
-               with_visual=False):
+               with_visual=False,
+               gru_layers=1):
     super(QRewriteModel, self).__init__()
     # self.batch_size = batch_size
     self.dec_units = dec_units
@@ -63,10 +64,10 @@ class QRewriteModel(tf.keras.Model):
     # self.dec_embedding = tf.keras.layers.Embedding(vocab_tar_size, embedding_dim)
     self.dec_embedding = embedding
     # return both sequence and state in GRU unit
-    self.gru = tf.keras.layers.GRU(self.dec_units,
+    gru_cells = [tf.keras.layers.GRUCell(dec_units) for i in range(gru_layers)]
+    self.gru = tf.keras.layers.RNN(gru_cells,
                                    return_sequences=True,
-                                   return_state=True,
-                                   recurrent_initializer='glorot_uniform')
+                                   return_state=True)
     # fc for classification
     self.fc = tf.keras.layers.Dense(vocab_tar_size)
 
@@ -125,20 +126,23 @@ class GenEncoder(tf.keras.Model):
   	           # embedding_dim,
                embedding,
   	           enc_units,
-               bidirection=False):
+               bidirection=False,
+               gru_layers=1):
     super(GenEncoder, self).__init__()
     #self.enc_embedding = tf.keras.layers.Embedding(vocab_inp_size, embedding_dim)
     self.enc_units = enc_units
 
     self.enc_embedding = embedding
     
+    gru_cells = [tf.keras.layers.GRUCell(enc_units) for i in range(gru_layers)]
+
     self.bidirection = bidirection
     if bidirection:
-        self.gru = tf.keras.layers.Bidirectional(tf.keras.layers.GRU(
-            enc_units, return_state=True, return_sequences=True, recurrent_initializer='glorot_uniform'))
+        self.gru = tf.keras.layers.Bidirectional(tf.keras.layers.RNN(
+            gru_cells, return_state=True, return_sequences=True))
     else:
-        self.gru = tf.keras.layers.GRU(
-          enc_units, return_state=True, return_sequences=True, recurrent_initializer='glorot_uniform')
+        self.gru = tf.keras.layers.RNN(
+          gru_cells, return_state=True, return_sequences=True)
 
   def call(self, x):
       # x   batch*len
