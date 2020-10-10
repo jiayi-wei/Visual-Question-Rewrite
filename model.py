@@ -110,7 +110,12 @@ class QRewriteModel(tf.keras.Model):
         x = tf.concat([tf.expand_dims(text_vector, 1),
                        x], axis=-1)
 
-    output, state = self.gru(x)
+    # output, state = self.gru(x)
+    all_output = self.gru(x)
+    output = all_output[0]
+    state = all_output[-1]
+    # print(all_output[0].shape, all_output[1].shape, all_output[2].shape)
+    
     output = tf.reshape(output, (-1, output.shape[2]))
 
     x = self.fc(output)

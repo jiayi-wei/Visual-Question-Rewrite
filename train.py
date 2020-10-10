@@ -12,7 +12,7 @@ import time
 ##   config  ##
 root = "./"
 
-exp_name = "res50_gen_token_2"
+exp_name = "exp_"
 
 cate = "auto_annot"
 # cate = "human_annot"
@@ -42,8 +42,8 @@ else:
     exp_name += "_no_encoder_bidirect"
 
 # [1-2, 1-2]
-GRU_layers = {"encoder": 2, "decoder": 2}
-exp_name += "_GRU_layers_enc" + GRU_layers["encoder"] + "_dec" + GRU_layers["decoder"]
+GRU_layers = {"encoder": 1, "decoder": 2}
+exp_name += "_GRU_layers_enc" + str(GRU_layers["encoder"]) + "_dec" + str(GRU_layers["decoder"])
 
 #################
 ###  data read ##
@@ -273,7 +273,7 @@ def eval(input_dataset, data_size, return_result=False):
 
 ################
 #### training ##
-
+print(exp_name)
 print("Begin training")
 EPOCHS = 50
 eval_loss = 100.0
