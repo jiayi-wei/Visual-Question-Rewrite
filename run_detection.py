@@ -101,7 +101,6 @@ image_dir = 'object_detection/test_images/'
 image_list = ['image2.jpg']
 
 
-'''
 visualization = True
 
 for image_to_det in image_list:
@@ -145,7 +144,6 @@ for image_to_det in image_list:
             keypoint_edges=get_keypoint_tuples(configs['eval_config']))
 
         plt.figure(figsize=(12,16))
-        # plt.imshow(image_np_with_detections)
+        plt.imshow(image_np_with_detections)
         # plt.show()
-        plt.savefig(os.path.join("models/vis_det", image_to_det))
-'''
+        plt.savefig(os.path.join("object_detection/vis_det", image_to_det))
