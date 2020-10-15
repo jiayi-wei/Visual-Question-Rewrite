@@ -51,10 +51,7 @@ def load_image_into_numpy_array(path):
     return np.array(image.getdata()).reshape(
         (im_height, im_width, 3)).astype(np.uint8)
 
-MODELS = {'centernet_with_keypoints': 'centernet_hg104_512x512_kpts_coco17_tpu-32', 'centernet_without_keypoints': 'centernet_hourglass104_512x512_coco17_tpu-8'}
-
-model_display_name = 'centernet_without_keypoints' # @param ['centernet_with_keypoints', 'centernet_without_keypoints']
-model_name = MODELS[model_display_name]
+model_name = 'centernet_hourglass104_1024x1024_coco17_tpu-8'
 
 pipeline_config = os.path.join('object_detection/configs/tf2/', model_name + '.config')
 model_dir = 'object_detection/test_data/checkpoint/'
@@ -86,7 +83,6 @@ def get_model_detection_function(model):
 
 detect_fn = get_model_detection_function(detection_model)
 
-# label_map_path = configs['eval_input_config'].label_map_path
 label_map_path = 'object_detection/data/mscoco_label_map.pbtxt'
 # print(label_map_path)
 label_map = label_map_util.load_labelmap(label_map_path)
@@ -97,53 +93,48 @@ categories = label_map_util.convert_label_map_to_categories(
 category_index = label_map_util.create_category_index(categories)
 label_map_dict = label_map_util.get_label_map_dict(label_map, use_display_name=True)
 
-image_dir = 'object_detection/test_images/'
-image_list = ['image2.jpg']
+image_dir_list = ['auto_annot/image', 'human_annot/image']
+visualization = False
 
+for image_dir in image_dir_list:
+    image_list = os.listdir(image_dir)
+    det_res_dir = os.path.join(split(image_dir, '/')[0], 'det_res')
+    if not os.path.exists(det_res_dir):
+        os.mkdir(det_res_dir)
 
-visualization = True
+    for image_name in image_list:
+        image_path = os.path.join(image_dir, image_name)
+        image_np = load_image_into_numpy_array(image_path)
 
-for image_to_det in image_list:
-    image_path = os.path.join(image_dir, image_to_det)
-    image_np = load_image_into_numpy_array(image_path)
+        input_tensor = tf.convert_to_tensor(
+            np.expand_dims(image_np, 0), dtype=tf.float32)
+        detections, predictions_dict, shapes = detect_fn(input_tensor)
 
-    # Things to try:
-    # Flip horizontally
-    # image_np = np.fliplr(image_np).copy()
+        # print("detections", detections)
+        # print("predictions_dict", predictions_dict)
+        # print("shapes", shapes)
 
-    # Convert image to grayscale
-    # image_np = np.tile(
-    #     np.mean(image_np, 2, keepdims=True), (1, 1, 3)).astype(np.uint8)
+        if visualization:
+            label_id_offset = 1
+            image_np_with_detections = image_np.copy()
 
-    input_tensor = tf.convert_to_tensor(
-        np.expand_dims(image_np, 0), dtype=tf.float32)
-    detections, predictions_dict, shapes = detect_fn(input_tensor)
+            keypoints, keypoint_scores = None, None
 
-    # print("detections", detections)
-    # print("predictions_dict", predictions_dict)
-    # print("shapes", shapes)
+            viz_utils.visualize_boxes_and_labels_on_image_array(
+                image_np_with_detections,
+                detections['detection_boxes'][0].numpy(),
+                (detections['detection_classes'][0].numpy() + label_id_offset).astype(int),
+                detections['detection_scores'][0].numpy(),
+                category_index,
+                use_normalized_coordinates=True,
+                max_boxes_to_draw=200,
+                min_score_thresh=.30,
+                agnostic_mode=False,
+                keypoints=keypoints,
+                keypoint_scores=keypoint_scores,
+                keypoint_edges=get_keypoint_tuples(configs['eval_config']))
 
-    if visualization:
-        label_id_offset = 1
-        image_np_with_detections = image_np.copy()
-
-        keypoints, keypoint_scores = None, None
-
-        viz_utils.visualize_boxes_and_labels_on_image_array(
-            image_np_with_detections,
-            detections['detection_boxes'][0].numpy(),
-            (detections['detection_classes'][0].numpy() + label_id_offset).astype(int),
-            detections['detection_scores'][0].numpy(),
-            category_index,
-            use_normalized_coordinates=True,
-            max_boxes_to_draw=200,
-            min_score_thresh=.30,
-            agnostic_mode=False,
-            keypoints=keypoints,
-            keypoint_scores=keypoint_scores,
-            keypoint_edges=get_keypoint_tuples(configs['eval_config']))
-
-        plt.figure(figsize=(12,16))
-        plt.imshow(image_np_with_detections)
-        # plt.show()
-        plt.savefig(os.path.join("object_detection/vis_det", image_to_det))
+            plt.figure(figsize=(12,16))
+            plt.imshow(image_np_with_detections)
+            # plt.show()
+            plt.savefig(os.path.join("object_detection/vis_det", image_to_det))
