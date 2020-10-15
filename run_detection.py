@@ -19,10 +19,10 @@ from object_detection.builders import model_builder
 
 def get_keypoint_tuples(eval_config):
     """Return a tuple list of keypoint edges from the eval config.
-        
+
     Args:
         eval_config: an eval config containing the keypoint edges
-                    
+
     Returns:
         a list of edge tuples, each in the format (start, end)
     """
@@ -34,7 +34,7 @@ def get_keypoint_tuples(eval_config):
 
 def load_image_into_numpy_array(path):
     """Load an image from file into a numpy array.
-    
+
     Puts image into numpy array to feed into tensorflow graph.
     Note that by convention we put it into a numpy array with shape
     (height, width, channels), where channels=3 for RGB.
@@ -56,8 +56,8 @@ MODELS = {'centernet_with_keypoints': 'centernet_hg104_512x512_kpts_coco17_tpu-3
 model_display_name = 'centernet_without_keypoints' # @param ['centernet_with_keypoints', 'centernet_without_keypoints']
 model_name = MODELS[model_display_name]
 
-pipeline_config = os.path.join('models/research/object_detection/configs/tf2/', model_name + '.config')
-model_dir = 'models/research/object_detection/test_data/checkpoint/'
+pipeline_config = os.path.join('object_detection/configs/tf2/', model_name + '.config')
+model_dir = 'object_detection/test_data/checkpoint/'
 
 # Load pipeline config and build a detection model
 configs = config_util.get_configs_from_pipeline_file(pipeline_config)
@@ -81,13 +81,13 @@ def get_model_detection_function(model):
         detections = model.postprocess(prediction_dict, shapes)
 
         return detections, prediction_dict, tf.reshape(shapes, [-1])
-    
+
     return detect_fn
 
 detect_fn = get_model_detection_function(detection_model)
 
 # label_map_path = configs['eval_input_config'].label_map_path
-label_map_path = 'models/research/object_detection/data/mscoco_label_map.pbtxt'
+label_map_path = 'object_detection/data/mscoco_label_map.pbtxt'
 # print(label_map_path)
 label_map = label_map_util.load_labelmap(label_map_path)
 categories = label_map_util.convert_label_map_to_categories(
@@ -97,9 +97,11 @@ categories = label_map_util.convert_label_map_to_categories(
 category_index = label_map_util.create_category_index(categories)
 label_map_dict = label_map_util.get_label_map_dict(label_map, use_display_name=True)
 
-image_dir = 'models/research/object_detection/test_images/'
+image_dir = 'object_detection/test_images/'
 image_list = ['image2.jpg']
 
+
+'''
 visualization = True
 
 for image_to_det in image_list:
@@ -145,4 +147,5 @@ for image_to_det in image_list:
         plt.figure(figsize=(12,16))
         # plt.imshow(image_np_with_detections)
         # plt.show()
-        plt.savefig(os.path.join("models/vis_det", image_to_det)) 
+        plt.savefig(os.path.join("models/vis_det", image_to_det))
+'''
