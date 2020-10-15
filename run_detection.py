@@ -51,7 +51,7 @@ def load_image_into_numpy_array(path):
     return np.array(image.getdata()).reshape(
         (im_height, im_width, 3)).astype(np.uint8)
 
-model_name = 'centernet_hourglass104_1024x1024_coco17_tpu-8'
+model_name = 'centernet_hourglass104_1024x1024_coco17_tpu-32'
 
 pipeline_config = os.path.join('object_detection/configs/tf2/', model_name + '.config')
 model_dir = 'object_detection/test_data/checkpoint/'
@@ -92,13 +92,15 @@ categories = label_map_util.convert_label_map_to_categories(
     use_display_name=True)
 category_index = label_map_util.create_category_index(categories)
 label_map_dict = label_map_util.get_label_map_dict(label_map, use_display_name=True)
+# print(category_index)
+# print(label_map_dict)
 
 image_dir_list = ['auto_annot/image', 'human_annot/image']
 visualization = False
 
 for image_dir in image_dir_list:
     image_list = os.listdir(image_dir)
-    det_res_dir = os.path.join(split(image_dir, '/')[0], 'det_res')
+    det_res_dir = os.path.join(image_dir.split('/')[0], 'det_res')
     if not os.path.exists(det_res_dir):
         os.mkdir(det_res_dir)
 
@@ -109,11 +111,23 @@ for image_dir in image_dir_list:
         input_tensor = tf.convert_to_tensor(
             np.expand_dims(image_np, 0), dtype=tf.float32)
         detections, predictions_dict, shapes = detect_fn(input_tensor)
+        
+        f = open(os.path.join(det_res_dir, image_name.split('.')[0] + '.txt'), 'w')
+        for i in range(detections['num_detections'][0].numpy()):
+            if detections['detection_classes'][0][i].numpy() in category_index and detections['detection_scores'][0][i].numpy() >= 0.3:
+                item = category_index[detections['detection_classes'][0][i].numpy()]['name']
+                item += ' ' + str(detections['detection_scores'][0][i].numpy())
+                for j in range(4):
+                    item += ' ' + str(detections['detection_boxes'][0][i][j].numpy())
+                item += '\n'
+                f.write(item)
 
+        f.close()
         # print("detections", detections)
         # print("predictions_dict", predictions_dict)
         # print("shapes", shapes)
-
+        # print(input_tensor.shape)
+        # quit()
         if visualization:
             label_id_offset = 1
             image_np_with_detections = image_np.copy()
