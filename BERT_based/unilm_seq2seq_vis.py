@@ -40,7 +40,7 @@ token_dict, keep_tokens = load_vocab(
 tokenizer = Tokenizer(token_dict, do_lower_case=True)
 
 
-total_data = load_data('data.json')
+total_data = load_data('../auto_annot/data.json')
 
 def filter_data(ori_data):
   new_data = []
@@ -102,7 +102,7 @@ class data_generator(DataGenerator):
   def __iter__ (self, random=False):
     batch_images, batch_token_ids, batch_segment_ids = [], [], []
     for is_end, (target, bland, image_path) in self.sample(random):
-      batch_images.append(read_image(os.path.jion('../auto_annot/', image_path)))
+      batch_images.append(read_image(os.path.join('../auto_annot/', image_path)))
       token_ids, segment_ids = tokenizer.encode(bland, target, maxlen=maxlen)
       batch_token_ids.append(token_ids)
       batch_segment_ids.append(segment_ids)
@@ -172,7 +172,7 @@ class Evaluator(keras.callbacks.Callback):
     metrics = self.evaluate(valid_data)
     if metrics['bleu'] > self.best_bleu:
       self.best_bleu = metrics['bleu']
-      mode.save_weights('best_model_epoch_' + str(epoch) + '.weights')
+      mode.save_weights('best_vis_model_epoch_' + str(epoch) + '.weights')
     metrics['best_bleu'] = self.best_bleu
     print('valid_data: ', metrics)
 

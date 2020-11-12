@@ -30,7 +30,7 @@ def load_data(filename):
     D.append((item['rewrite_q'], item['new_q']))
   return D
 
-total_data = load_data('data.json')
+total_data = load_data('../auto_annot/data.json')
 
 
 token_dict, keep_tokens = load_vocab(
