@@ -32,6 +32,13 @@ def load_data(filename):
 
 total_data = load_data('data.json')
 
+
+token_dict, keep_tokens = load_vocab(
+	dict_path=dict_path, simplified=True,
+	startswith=['[PAD]', '[UNK]', '[CLS]', '[SEP]'],)
+tokenizer = Tokenizer(token_dict, do_lower_case=True)
+
+
 def filter_data(ori_data):
   new_data = []
   for target, bland in ori_data:
@@ -45,11 +52,6 @@ total_data = filter_data(total_data)
 
 train_data = total_data[:int(len(total_data) * 0.8)]
 valid_data = total_data[int(len(total_data) * 0.8):]
-
-token_dict, keep_tokens = load_vocab(
-	dict_path=dict_path, simplified=True,
-	startswith=['[PAD]', '[UNK]', '[CLS]', '[SEP]'],)
-tokenizer = Tokenizer(token_dict, do_lower_case=True)
 
 
 class data_generator(DataGenerator):
