@@ -5,7 +5,7 @@ from bert4keras.layers import Loss
 from bert4keras.models import build_transformer_model
 from bert4keras.tokenizers import Tokenizer, load_vocab
 from bert4keras.optimizers import Adam
-from bert4keras.snippets import sequence_padding, open
+from bert4keras.snippets import sequence_padding, open, is_string
 from bert4keras.snippets import DataGenerator, AutoRegressiveDecoder
 from keras.models import Model
 from rouge import Rouge
@@ -16,7 +16,7 @@ import cv2
 
 
 maxlen = 128 # most are under 100, we dont lose too much information
-batch_size = 32
+batch_size = 16
 epochs = 50
 
 config_path = './bert_config.json'
@@ -107,6 +107,8 @@ class data_generator(DataGenerator):
       batch_token_ids.append(token_ids)
       batch_segment_ids.append(segment_ids)
       if len(batch_token_ids) == self.batch_size or is_end:
+        batch_images = np.array(batch_images)
+        batch_images = preprocess_input(batch_images)
         batch_token_ids = sequence_padding(batch_token_ids)
         batch_segment_ids = sequence_padding(batch_segment_ids)
         yield [batch_token_ids, batch_segment_ids, batch_images], None
@@ -116,7 +118,7 @@ class data_generator(DataGenerator):
 
 class CrossEntropy(Loss):
   def compute_loss(self, inputs, mask=None):
-    print(inputs)
+    # print(inputs)
     y_true, y_mask, y_pred = inputs
     y_true = y_true[:, 1:]
     y_mask = y_mask[:, 1:]
@@ -148,11 +150,11 @@ class Seq2SeqWImg(AutoRegressiveDecoder):
     token_ids, segment_ids, image = inputs
     token_ids = np.concatenate([token_ids, output_ids], 1)
     segment_ids = np.concatenate([segment_ids, np.ones_like(output_ids)], 1)
-    return mode.predict([token_ids, segment_ids, image])[:, -1]
+    return model.predict([token_ids, segment_ids, image])[:, -1]
 
   def generate(self, text, image, topk=1):
     if is_string(image):
-      image = read_image(image)
+      image = read_image(os.path.join('../auto_annot', image))
     max_c_len = maxlen - self.maxlen
     token_ids, segment_ids = tokenizer.encode(text, maxlen=max_c_len)
     output_ids = self.beam_search([token_ids, segment_ids, image], topk)
@@ -172,7 +174,7 @@ class Evaluator(keras.callbacks.Callback):
     metrics = self.evaluate(valid_data)
     if metrics['bleu'] > self.best_bleu:
       self.best_bleu = metrics['bleu']
-      mode.save_weights('best_vis_model_epoch_' + str(epoch) + '.weights')
+      model.save_weights('best_vis_model_epoch_' + str(epoch) + '.weights')
     metrics['best_bleu'] = self.best_bleu
     print('valid_data: ', metrics)
 
@@ -189,7 +191,7 @@ class Evaluator(keras.callbacks.Callback):
         rouge_2 += scores[0]['rouge-2']['f']
         rouge_l += scores[0]['rouge-l']['f']
         bleu += sentence_bleu(
-            reference=[target.split(' ')],
+            references=[target.split(' ')],
             hypothesis=pred_target.split(' '),
             smoothing_function=self.smooth)
     rouge_1 /= total
@@ -199,10 +201,8 @@ class Evaluator(keras.callbacks.Callback):
     return {'rouge_1': rouge_1, 'rouge_2': rouge_2, 'rouge_l': rouge_l, 'bleu': bleu}
 
 
-
 evaluator = Evaluator()
 train_generator = data_generator(train_data, batch_size)
-
 
 
 model.fit_generator(
@@ -211,3 +211,19 @@ model.fit_generator(
     epochs=epochs,
     callbacks=[evaluator]
 )
+
+
+with open('unlim_bert_pretrain_visual.txt', 'w') as f:
+    f.write('Train:\n')
+    for target, bland, image_path in tqdm(train_data):
+        f.write('input: ' + bland + '\n')
+        f.write('target: ' + target + '\n')
+        f.write('output: ' + seq2seq_model.generate(bland, image_path, 1) + '\n')
+        f.write('\n')
+
+    f.write('Test:\n')
+    for target, bland, image_path in tqdm(valid_data):
+        f.write('input: ' + bland + '\n')
+        f.write('target: ' + target + '\n')
+        f.write('output: ' + seq2seq_model.generate(bland, image_path, 1) + '\n')
+        f.write('\n')
