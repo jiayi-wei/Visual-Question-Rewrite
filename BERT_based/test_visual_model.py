@@ -203,7 +203,7 @@ evaluator = Evaluator()
 train_generator = data_generator(train_data, batch_size)
 
 
-model.load_weights('./best_vis_model_epoch_15.weights')
+model.load_weights('./best_vis_model_epoch_16.weights')
 
 
 with open('unlim_bert_pretrain_visual.txt', 'w') as f:
