@@ -203,6 +203,7 @@ class Evaluator(keras.callbacks.Callback):
 
 evaluator = Evaluator()
 train_generator = data_generator(train_data, batch_size)
+eval_generator = data_generator(valid_data, batch_size)
 
 
 model.fit_generator(
@@ -212,8 +213,15 @@ model.fit_generator(
     callbacks=[evaluator]
 )
 
+model.fit_generator(
+    eval_generator.forfit(),
+    steps_per_epoch=len(eval_generator),
+    epochs=5,
+    callbacks=[evaluator]
+)
 
-with open('unlim_bert_pretrain_visual.txt', 'w') as f:
+
+with open('unlim_bert_pretrain_visual_modified.txt', 'w') as f:
     f.write('Train:\n')
     for target, bland, image_path in tqdm(train_data):
         f.write('input: ' + bland + '\n')
