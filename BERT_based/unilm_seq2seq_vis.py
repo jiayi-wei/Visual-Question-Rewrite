@@ -203,20 +203,11 @@ class Evaluator(keras.callbacks.Callback):
 
 evaluator = Evaluator()
 train_generator = data_generator(train_data, batch_size)
-eval_generator = data_generator(valid_data, batch_size)
-
 
 model.fit_generator(
     train_generator.forfit(),
     steps_per_epoch=len(train_generator),
     epochs=epochs,
-    callbacks=[evaluator]
-)
-
-model.fit_generator(
-    eval_generator.forfit(),
-    steps_per_epoch=len(eval_generator),
-    epochs=5,
     callbacks=[evaluator]
 )
 
