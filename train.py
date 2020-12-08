@@ -7,12 +7,15 @@ import tensorflow as tf
 import os
 import time
 
+from rouge import Rouge
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
+
 
 ###############
 ##   config  ##
 root = "./"
 
-exp_name = "exp_"
+exp_name = "new_metrics_exp_"
 
 cate = "auto_annot"
 # cate = "human_annot"
@@ -89,6 +92,8 @@ embedding_dim = 256
 units = 768
 # with_visual = False
 max_length_targ, max_length_inp = target_ids.shape[1], input_ids.shape[1]
+print(max_length_targ, max_length_inp)
+quit()
 ####################
 #### dataset #######
 # bert input encoding
@@ -158,7 +163,7 @@ def loss_function(real, pred):
   return tf.reduce_mean(loss_)
 
 
-checkpoint_dir = './training_checkpoints/' + exp_name 
+checkpoint_dir = './training_checkpoints/' + exp_name
 checkpoint_prefix = os.path.join(checkpoint_dir, 'ckpt')
 checkpoint = tf.train.Checkpoint(optimizer=optimizer,
                                  encoder=encoder,
@@ -228,19 +233,19 @@ def eval(input_dataset, data_size, return_result=False):
       out_sen = ""
       text_weights = []
       img_weights = []
-    
+
     enc_output, enc_hidden = encoder(ids)
     dec_hidden = enc_hidden
     dec_input = tf.expand_dims([gen_tokenizer.word_index['[CLS]']] * ids.shape[0], 1)
-    
+
     for t in range(1, max_length_targ):
       predictions, dec_hidden, text_weight, img_weight = decoder(dec_input, dec_hidden, enc_output, img)
-      
+
       batch_loss += loss_function(targ[:, t], predictions)
-      
+
       pre_ = tf.argmax(predictions[0]).numpy()
       pre_ids = gen_tokenizer.index_word[pre_]
-      
+
       if return_result == True:
         out_sen += pre_ids + ' '
         text_weights.append(text_weight.numpy())
@@ -253,7 +258,7 @@ def eval(input_dataset, data_size, return_result=False):
       dec_input = tf.expand_dims([pre_], 1)
 
     # total_loss = total_loss / data_size
-    
+
     batch_loss = batch_loss / int(targ.shape[1])
     total_loss += batch_loss
 
@@ -263,7 +268,7 @@ def eval(input_dataset, data_size, return_result=False):
       output_sentences.append(out_sen)
       all_text_weights.append(text_weights)
       all_img_weights.append(img_weights)
-  
+
   total_loss = total_loss / data_size
 
   if return_result:
@@ -271,12 +276,38 @@ def eval(input_dataset, data_size, return_result=False):
 
   return total_loss
 
+
+def cal_metrics(target, output):
+  total = 1
+  rouge_1, rouge_2, rouge_l, bleu = 0, 0, 0, 0
+  rouge = Rouge()
+  smooth = SmoothingFunction().method1
+  for tar, out in len(target):
+    total += 1
+    tar = ' '.join(tar).lower()
+    out = ' '.join(out).lower()
+    scores = rouge.get_scores(hyps=out, refs=tar)
+    rouge_1 += scores[0]['rouge-1']['f']
+    rouge_2 += scores[0]['rouge-2']['f']
+    rouge_l += scores[0]['rouge-l']['f']
+    bleu += sentence_bleu(
+      references=[tar.split(' ')],
+      hypothesis=out.split(' '),
+      smoothing_function=smooth)
+    rouge_1 /= total
+    rouge_2 /= total
+    rouge_l /= total
+    bleu /= total
+    return {'rouge_1': rouge_1, 'rouge_2': rouge_2, 'rouge_l': rouge_l, 'bleu': bleu}
+
+
 ################
 #### training ##
 print(exp_name)
 print("Begin training")
 EPOCHS = 50
 eval_loss = 100.0
+best_bleu = 0.0
 
 for epoch in range(EPOCHS):
   start = time.time()
@@ -293,18 +324,31 @@ for epoch in range(EPOCHS):
       print('Epoch {} Batch {} Loss {:.4f}'.format(epoch + 1,
                                                    batch,
                                                    batch_loss.numpy()))
-  eval_loss_after_epoch = eval(val_dataset, len(val_target_ids), return_result=False)
-
-  if eval_loss > eval_loss_after_epoch:
-    eval_loss = eval_loss_after_epoch
-    print("Model Saved with eval loss {}".format(eval_loss))
+  # eval_loss_after_epoch = eval(val_dataset, len(val_target_ids), return_result=False)
+  eval_loss_after_epoch, _, target_after_epoch, output_after_epoch, _, _ = eval(
+    val_dataset, len(val_target_ids), return_result=True)
+  metrics = cal_metrics(target_after_epoch, output_after_epoch)
+  if metrics['bleu'] > best_bleu:
+    best_bleu = metrics['bleu']
+    print("Model Saved")
     checkpoint.save(file_prefix=checkpoint_prefix+"_eval")
+    # metrics['best_bleu'] = best_bleu
+    # print('valid_data: ', metrics)
+  # if eval_loss > eval_loss_after_epoch:
+  #   eval_loss = eval_loss_after_epoch
+  #   print("Model Saved with eval loss {}".format(eval_loss))
+  #   checkpoint.save(file_prefix=checkpoint_prefix+"_eval")
   elif (epoch + 1) % 10 == 0:
     print("Model Saved")
     checkpoint.save(file_prefix=checkpoint_prefix+"_epoch")
 
-  print('Epoch {} Loss {:.4f}'.format(epoch + 1, total_loss / steps_per_epoch))
-  print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
+  metrics['best_bleu'] = best_bleu
+  metrics['loss'] = total_loss / steps_per_epoch
+  metrics['duration'] = time.time() - start
+
+  print("valid_data: ", metrics)
+  # print('Epoch {} Loss {:.4f}'.format(epoch + 1, total_loss / steps_per_epoch))
+  # print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
 
 
 # evaluate after training
