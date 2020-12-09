@@ -57,9 +57,9 @@ print("data preprocessing")
 q_data, new_q_data, img_data = data_preprocess.read_data(root, cate)
 
 target_ids, input_ids, img_data, gen_tokenizer = tokenizer.general_preprocess(q_data, new_q_data, img_data)
-print(target_ids.shape)
-print(input_ids.shape)
-print(len(img_data))
+# print(target_ids.shape)
+# print(input_ids.shape)
+# print(len(img_data))
 # quit()
 
 img_data = data_preprocess.extract_img_feat(root,
@@ -92,8 +92,8 @@ embedding_dim = 256
 units = 768
 # with_visual = False
 max_length_targ, max_length_inp = target_ids.shape[1], input_ids.shape[1]
-print(max_length_targ, max_length_inp)
-quit()
+# print(max_length_targ, max_length_inp)
+# quit()
 ####################
 #### dataset #######
 # bert input encoding
@@ -282,17 +282,17 @@ def cal_metrics(target, output):
   rouge_1, rouge_2, rouge_l, bleu = 0, 0, 0, 0
   rouge = Rouge()
   smooth = SmoothingFunction().method1
-  for tar, out in len(target):
+  for i in range(len(target)):
     total += 1
-    tar = ' '.join(tar).lower()
-    out = ' '.join(out).lower()
-    scores = rouge.get_scores(hyps=out, refs=tar)
+    tar = ' '.join(target[i]).lower()
+    out = ' '.join(output[i]).lower()
+    scores = rouge.get_scores(hyps=output[i], refs=target[i])
     rouge_1 += scores[0]['rouge-1']['f']
     rouge_2 += scores[0]['rouge-2']['f']
     rouge_l += scores[0]['rouge-l']['f']
     bleu += sentence_bleu(
-      references=[tar.split(' ')],
-      hypothesis=out.split(' '),
+      references=[target[i].split(' ')],
+      hypothesis=output[i].split(' '),
       smoothing_function=smooth)
     rouge_1 /= total
     rouge_2 /= total
